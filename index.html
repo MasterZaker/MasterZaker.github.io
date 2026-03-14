@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +12,7 @@
 <body>
 
 <header>
-    <h1>Gaspare Cipolletta - Game Designer</h1>
+    <h1>Gaspare Cipolletta AKA Zaker - Game Designer</h1>
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
@@ -29,28 +32,48 @@
 
     <section id="portfolio">
         <h2>I Miei Progetti</h2>
-        <p>Esplora i miei lavori, che spaziano dalla documentazione di design fino alla prototipazione tecnica:</p>
-        <ul>
-            <li><strong>Protoripi in Unity:</strong> Sviluppo di meccaniche di base (core loop) e test di giocabilità per validare le idee.</li>
-            <li><strong>Modellazione 3D in Blender:</strong> Creazione di prop, ambienti e asset ottimizzati per l'integrazione nel motore di gioco.</li>
-            <li><strong>Game Design Document (GDD):</strong> Stesura di documentazione chiara e strutturata per allineare il team su visione, meccaniche e progressione.</li>
-        </ul>
-
-        <div id="galleria-lavori">
-            <h3>I Miei Lavori Visivi</h3>
+        <h3>Modellazione 3D</h3>
+        <p><strong>Modellazione 3D in Blender:</strong> Creazione di prop, ambienti e asset ottimizzati per l'integrazione nel motore di gioco.</p>
+        <div class="galleria">
             <article>
-                <h4>Material Test - Modello 3D</h4>
-                <img src="immagini/Material%20test.png" alt="Utilizzo di materiali su Blender" width="500">
+                <h4>Material Test</h4>
+                <img src="immagini/Material%20test.png" alt="Utilizzo di materiali su Blender">
             </article>
 
-            <hr> <article>
-            <h4>Animazione in blender di espressioni facciali</h4>
-            <video controls width="500">
-                <source src="video/animation%20expression%20blender.mp4" type="video/mp4">
-            </video>
-            <p>Animazione di un modello 3d su blender riguardo alle espressioni facciali.</p>
-        </article>
+            <article>
+                <h4>Material Test Legno</h4>
+                <img src="immagini/material%20wood%20blender.png" alt="Nodi di creazione texture legno">
+                <img src="immagini/Wood%20Plank.png" alt="Panca di Legno">
+            </article>
         </div>
+
+        <h3>Animazione</h3>
+        <div class="galleria">
+            <article>
+                <h4>Espressioni Facciali</h4>
+                <video controls>
+                    <source src="video/animation%20expression%20blender.mp4" type="video/mp4">
+                </video>
+                <p>Test di rig e animazione facciale in Blender.</p>
+            </article>
+
+            <article>
+                <h4>Simulazione Simbionte Venom</h4>
+                <video controls>
+                    <source src="video/animation%20venom%20houdini.mp4" type="video/mp4">
+                </video>
+                <p>Simulazione di come si muoverebbe il simbionte di Venom attraverso il software Houdini</p>
+            </article>
+        </div>
+
+        <h3>Sviluppo e Progetti</h3>
+        <div class="galleria">
+            <article>
+                <h4>Prototipo Unity (In Arrivo)</h4>
+                <p>Presto inserirò screenshot e build giocabili dei miei prototipi in Unity.</p>
+            </article>
+        </div>
+
     </section>
 
     <section id="about">

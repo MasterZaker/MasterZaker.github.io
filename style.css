@@ -1,72 +1,149 @@
 /* 1. RESET: Azzera i margini predefiniti */
+main
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section
 {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+    margin-bottom: 60px;
 }
 
 /* 2. BODY: Tema Scuro stile interfaccia IntelliJ (#1e1f22) */
 body
 {
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-background-color: #1e1f22;
-color: #dfe1e5; /* Testo chiaro, non bianco puro per non stancare gli occhi */
-line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1e1f22;
+    color: #dfe1e5; /* Testo chiaro, non bianco puro per non stancare gli occhi */
+    line-height: 1.6;
 }
 
 /* 3. LAYOUT: Centriamo il contenuto */
 header, main, footer
 {
-max-width: 900px;
-margin: 0 auto;
-padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* 4. HEADER & MENU */
 header
 {
-text-align: center;
-border-bottom: 4px solid;
-border-image: linear-gradient(45deg, #f92a82, #ff521b, #007aff) 1;
-padding-bottom: 20px;
-margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 4px solid;
+    border-image: linear-gradient(45deg, #f92a82, #ff521b, #007aff) 1;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 nav ul
 {
-list-style-type: none;
-padding-top: 15px;
+    list-style-type: none;
+    padding-top: 15px;
 }
 
 nav li
 {
-dispaly: inline;
-margin: 0 15px;
+    display: inline;
+    margin: 0 15px;
 }
 
 /* Lo stile dei link (Accento Magenta stile IntelliJ) */
 nav a
 {
-color: #f92a82; /* Il magenta vibrante dell'icona */
-text-decoration: none;
-font-weight: bold;
-transition: color 0.3s ease;
+    color: #f92a82; /* Il magenta vibrante dell'icona */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 /* Effetto Hover: quando passi il mouse, diventano azzurri */
 nav a:hover
 {
-color: #007aff; /* L'azzurro dell'icona */
+    color: #007aff; /* L'azzurro dell'icona */
 }
 
 /* 5. IMMAGINI E VIDEO */
 img, video
 {
-max-width: 100%;
-border-radius: 8px;
-margin-top: 10px;
-margin-bottom: 20px;
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 
 /* Aggiungiamo una leggera ombra per dare profondità ai tuoi lavori */
-box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
+
+/* STILE PER I TITOLI */
+h1, h2, h3
+{
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 2px; /*spaziatura*/
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+h1
+{
+    font-size: 2.8rem;
+    color: #ffffff;
+    text-shadow: 0px 0px 15px rgba(249, 42, 130, 0.7);
+}
+
+h2
+{
+    color:#007aff;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+h4
+{
+    margin-bottom: 15px;
+}
+
+/* 6. GRIGLIA PORTFOLIO (CSS GRID) */
+
+/* Contenitore dei lavori */
+.galleria
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px; /* spazio tra una card e l'altra */
+    margin-top: 30px;
+    margin-bottom: 40px; /* spazio tra una galleria e l'altra */
+}
+
+/*Stile per le singole "Card" dei progetti*/
+.galleria article
+{
+    background-color: #2b2d30; /*Un grigio leggermente più chiaro dello sfondo*/
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #393b40; /* Un bordino sottile e scuro */
+
+    /* Prepariamo l'animazione per quando ci passi sopra col mouse */
+    transition: transform 0.3s ease, box-shadow 0.3 ease;
+}
+
+/* Effetto Hover: quando passi il mouse sopra una card del progetto */
+.galleria article:hover
+{
+    transform: translateY(-8px); /* Solleva la card verso l'alto di 8 pixel */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.8); /* Aumenta l'ombra sotto */
+    border-color: #007aff; /* Il bordo si illumina con l'azzurro */
+}
+
+/* Ripempimento foto e video nella card corretto */
+.galleria article img,
+.galleria article video
+{
+    width: 100%; /* Occupa tutta la larghezza della card */
+    height: auto;
+    border-radius: 8px;
+    margin-top: 0;
+}
+
