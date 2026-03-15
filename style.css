@@ -1,5 +1,5 @@
 /* 1. RESET: Azzera i margini predefiniti */
-main
+
 *{
     margin: 0;
     padding: 0;
@@ -115,9 +115,11 @@ h4
     gap: 25px; /* spazio tra una card e l'altra */
     margin-top: 30px;
     margin-bottom: 40px; /* spazio tra una galleria e l'altra */
+
+    align-items: start;
 }
 
-/*Stile per le singole "Card" dei progetti*/
+/* Stile per le singole "Card" dei progetti */
 .galleria article
 {
     background-color: #2b2d30; /*Un grigio leggermente più chiaro dello sfondo*/
@@ -126,7 +128,7 @@ h4
     border: 1px solid #393b40; /* Un bordino sottile e scuro */
 
     /* Prepariamo l'animazione per quando ci passi sopra col mouse */
-    transition: transform 0.3s ease, box-shadow 0.3 ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Effetto Hover: quando passi il mouse sopra una card del progetto */
@@ -147,3 +149,74 @@ h4
     margin-top: 0;
 }
 
+/* STILE PER LE FOTO CLICCABILI (THUMBNAILS) */
+
+/* Contenitore delle foto */
+.thumbnail-container
+{
+    position: relative; /* Fondamentale: fa da "recinto" per l'etichetta assoluta */
+    cursor: pointer; /* Trasforma la freccia del mouse in una manina (fa capire che è cliccabile) */
+    margin-bottom: 15px;
+}
+
+/*L'etichetta "+2"*/
+.badge-foto
+{
+    position: absolute; /* Permette di spostare la manina liberamente dentro il contenitore */
+    bottom: 15px; /* La attacca a 15px dal fondo */
+    right: 10px; /* La attacca a 10px dal lato destro */
+    background-color: rgba(0, 0, 0, 0.8); /* Sfondo nero semi-trasparente */
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 20px; /* Arrotonda i bordi a forma di pillola */
+    font-size:0.9rem;
+    font-weight: bold;
+    border: 1px solid #f92a82; /* Bordino magenta */
+    pointer-events: none; /* Fa sì che il click passi "attraverso" l'etichetta e colpisca la foto */
+}
+
+/* Bordino con effetto */
+.thumbnail-container img
+{
+    border: 2px solid transparent; /* Bordino trasparente alla partenza */
+    transition: border 0.3s ease, opacity 0.3s ease;
+}
+
+/* Quando si passa con il mouse sopra oppure si clicca sul contenitore */
+.thumbnail-container:hover img,
+.thumbnail-container:active img
+{
+    border: 2px solid #007aff; /* Bordino azzurro brillante */
+    opacity: 0.7; /* L'immagine si scurisce leggermente */
+}
+
+/* 8. FOOTER E CONTATTI */
+footer
+{
+    text-align:center;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #333; /* Una linea scura per separare il footer dal resto */
+}
+
+.social-links
+{
+    margin-bottom: 15px; /* Spazio tra le icone e il testo del copyright */
+}
+
+/* Stile per i link che contengono le icone */
+.social-links a
+{
+    display: inline-block;
+    margin: 0 15px; /* Spazio orizzontale tra un'icona e l'altra */
+    color: #dfe1e5; /* Colore grigio chiaro */
+    font-size:2.2rem; /* Rende le icone grandi */
+    transition: color 0.3s ease, transform 0.3s ease; /* Animazione fluida */
+}
+
+/* Effetto Hover: quando passi il mouse sopra le icone */
+.social-links a:hover
+{
+    color: #f92a82; /* Si illuminano di magenta */
+    transform: scale(1.2); /* Si ingrandiscono del 20% (Effetto 'Pop') */
+}
