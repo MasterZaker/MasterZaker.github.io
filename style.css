@@ -11,6 +11,12 @@ section
     margin-bottom: 60px;
 }
 
+/* Scrolling al cliccare i link interni della pagina */
+html
+{
+    scroll-behavior: smooth;
+}
+
 /* 2. BODY: Tema Scuro stile interfaccia IntelliJ (#1e1f22) */
 body
 {
