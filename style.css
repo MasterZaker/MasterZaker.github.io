@@ -113,6 +113,11 @@ h4
 
 /* 6. GRIGLIA PORTFOLIO (CSS GRID) */
 
+.nascosta
+{
+    display: none; /* Nasconde l'elemento dalla pagina */
+}
+
 /* Contenitore dei lavori */
 .galleria
 {
@@ -226,3 +231,87 @@ footer
     color: #f92a82; /* Si illuminano di magenta */
     transform: scale(1.2); /* Si ingrandiscono del 20% (Effetto 'Pop') */
 }
+
+/* 9. FINESTRA MODALE (LIGHTBOX) */
+.modal
+{
+    display: none; /* All'inizio è NASCOSTA */
+    position: fixed; /* Rimane bloccata sullo schermo anche se scorri */
+    z-index: 1000; /* Sta sopra a tutto il resto */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height :100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Sfondo nero */
+
+    /* Centrare l'immagine al suo interno */
+    align-items: center;
+    justify-content: center;
+}
+
+.chiudi-modal
+{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #dfe1e5;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.chiudi-modal:hover
+{
+    color: #f92a82; /* Diventa magenta al passaggio del mouse */
+}
+
+/* STILE PER LE FRECCE DELLA GALLERIA */
+.freccia {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    transition: 0.3s ease;
+    user-select: none; /* Impedisce di evidenziare le frecce per sbaglio */
+    text-decoration: none;
+
+    z-index: 10; /* Forza le freccie a rimanere sopra l'immagine */
+}
+
+.freccia.next {
+    right: 20px; /* La attacca a destra */
+}
+
+.freccia.prev {
+    left: 20px; /* La attacca a sinistra */
+}
+
+.freccia:hover {
+    color: #f92a82; /* Diventano magenta */
+    background-color: rgba(0,0,0,0.5); /* Uno sfondino nero per farle risaltare */
+    border-radius: 8px;
+}
+
+/* 10. EFFETTI EXTRA MODALE (FADE E ZOOM) */
+
+/* 1. L'animazione di dissolvenza (Fade-in) */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-anim {
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* 2. Rende fluido l'ingrandimento quando usi la rotellina del mouse */
+.modal-content {
+    transition: transform 0.2s ease-out;
+}
+

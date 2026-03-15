@@ -38,14 +38,17 @@
         <div class="galleria">
             <article>
                 <h4>Material Test</h4>
+                <div class="thumbnail-container">
                 <img src="immagini/Material%20test.png" alt="Utilizzo di materiali su Blender">
+                <div>
             </article>
 
             <article>
                 <h4>Material Test Legno</h4>
                 <div class="thumbnail-container">
-                <img src="immagini/material%20wood%20blender.png" alt="Nodi di creazione texture legno">
-                    <span class="badge-foto">+1</span>
+                <img src="immagini/Wood%20Plank.png" alt="Modello di una panca di legno texturizzata.">
+                <img src="immagini/material%20wood%20blender.png" alt="Nodi di creazione texture legno" class="nascosta">
+                <span class="badge-foto">+1</span>
                 </div>
             </article>
         </div>
@@ -95,6 +98,15 @@
     </div>
     <p>&copy; 2026 Gaspare Cipolletta. Tutti i diritti riservati.</p>
 </footer>
+
+<div id="modal-foto" class="modal">
+    <span class="chiudi-modal">&times;</span>
+    <a class="freccia prev">&#10094</a>
+    <img class="modal-content" id="img-ingrandita" alt="Immagine in evidenza">
+    <a class="freccia next">&#10095;</a>
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
