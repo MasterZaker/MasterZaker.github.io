@@ -259,6 +259,8 @@ footer
     font-weight: bold;
     cursor: pointer;
     transition: color 0.3s ease;
+
+    z-index: 10; /* Icona X al di sopra degli elementi */
 }
 
 .chiudi-modal:hover
