@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Archivio Progetti | GASPARE CIPOLLETTA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=Manrope:wght@200;300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed-dim": "#d1bcff",
+              "primary-fixed-dim": "#00dbe9",
+              "on-tertiary": "#3b2f00",
+              "error-container": "#93000a",
+              "on-tertiary-fixed": "#231b00",
+              "tertiary-fixed": "#ffe179",
+              "on-surface-variant": "#b9cacb",
+              "outline": "#849495",
+              "on-surface": "#e1e1ef",
+              "on-error": "#690005",
+              "surface-container-high": "#282933",
+              "surface-bright": "#373943",
+              "on-secondary-fixed-variant": "#5700c9",
+              "on-primary-fixed-variant": "#004f54",
+              "surface-variant": "#32343e",
+              "secondary-fixed": "#e9ddff",
+              "tertiary": "#fff5de",
+              "on-primary-fixed": "#002022",
+              "secondary": "#d1bcff",
+              "secondary-container": "#7000ff",
+              "surface-container": "#1d1f29",
+              "tertiary-fixed-dim": "#eac324",
+              "surface-container-highest": "#32343e",
+              "on-tertiary-container": "#715d00",
+              "on-primary": "#00363a",
+              "surface-dim": "#11131c",
+              "primary-container": "#00f0ff",
+              "inverse-primary": "#006970",
+              "on-secondary": "#3c0090",
+              "on-secondary-container": "#ddcdff",
+              "on-tertiary-fixed-variant": "#554500",
+              "on-background": "#e1e1ef",
+              "outline-variant": "#3b494b",
+              "inverse-on-surface": "#2e303a",
+              "surface": "#11131c",
+              "on-primary-container": "#006970",
+              "surface-container-low": "#191b24",
+              "error": "#ffb4ab",
+              "inverse-surface": "#e1e1ef",
+              "background": "#11131c",
+              "surface-tint": "#00dbe9",
+              "on-secondary-fixed": "#23005b",
+              "tertiary-container": "#fed639",
+              "primary-fixed": "#7df4ff",
+              "primary": "#dbfcff",
+              "on-error-container": "#ffdad6",
+              "surface-container-lowest": "#0c0e17"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #11131c;
+            color: #e1e1ef;
+            font-family: 'Inter', sans-serif;
+            cursor: crosshair;
+        }
+        .neon-glow-text {
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.5), 0 0 20px rgba(249, 42, 130, 0.3);
+        }
+        .card-glow:hover {
+            box-shadow: 0 0 30px rgba(0, 240, 255, 0.15);
+            transform: translateY(-4px);
+        }
+        .glass-panel {
+            background: rgba(50, 52, 62, 0.6);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#11131c] dark:bg-[#11131c]">
+<div class="flex justify-between items-center px-10 py-6 max-w-[1440px] mx-auto">
+<div class="text-xl font-black tracking-tighter text-[#00f0ff] dark:text-[#00f0ff]">
+                NEON_CURATOR
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-[0.75rem] font-bold text-[#00f0ff] border-b-2 border-[#00f0ff] pb-1 hover:text-[#00f0ff] hover:opacity-100 transition-all duration-300" href="#">ARCHIVE</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-[0.75rem] font-bold text-[#e1e1ef] opacity-70 hover:text-[#00f0ff] hover:opacity-100 transition-all duration-300" href="#">3D_MODELING</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-[0.75rem] font-bold text-[#e1e1ef] opacity-70 hover:text-[#00f0ff] hover:opacity-100 transition-all duration-300" href="#">ANIMATION</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-[0.75rem] font-bold text-[#e1e1ef] opacity-70 hover:text-[#00f0ff] hover:opacity-100 transition-all duration-300" href="#">DEVELOPMENT</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-[0.75rem] font-bold text-[#e1e1ef] opacity-70 hover:text-[#00f0ff] hover:opacity-100 transition-all duration-300" href="#">ABOUT</a>
+</div>
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-[#00f0ff] cursor-pointer">grid_view</span>
+</div>
+</div>
+<div class="bg-[#191b24] h-[1px] w-full"></div>
+</nav>
+<main class="pt-32 px-10 max-w-[1440px] mx-auto">
+<!-- Header Section -->
+<header class="mb-20">
+<div class="flex flex-col md:flex-row items-baseline gap-4 mb-4">
+<span class="font-label text-[0.6875rem] uppercase tracking-[0.2em] text-primary-container font-light">Artifact Library</span>
+<div class="h-[1px] flex-grow bg-outline-variant/20"></div>
+</div>
+<h1 class="font-headline text-6xl md:text-8xl font-black tracking-tighter uppercase leading-none neon-glow-text">
+                ARCHIVIO <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-container to-secondary">PROGETTI</span>
+</h1>
+</header>
+<!-- Filter Bar -->
+<section class="mb-12 sticky top-24 z-40 py-4 bg-surface/80 backdrop-blur-md">
+<div class="flex flex-wrap items-center gap-2">
+<button class="px-6 py-2 bg-primary-container text-on-primary font-label text-[0.6875rem] font-bold tracking-widest transition-all duration-300 border border-primary-container">TUTTI</button>
+<button class="px-6 py-2 bg-transparent text-on-surface-variant font-label text-[0.6875rem] font-bold tracking-widest hover:text-primary-container transition-all duration-300 border border-outline-variant/30">MODELLAZIONE 3D</button>
+<button class="px-6 py-2 bg-transparent text-on-surface-variant font-label text-[0.6875rem] font-bold tracking-widest hover:text-primary-container transition-all duration-300 border border-outline-variant/30">ANIMAZIONE</button>
+<button class="px-6 py-2 bg-transparent text-on-surface-variant font-label text-[0.6875rem] font-bold tracking-widest hover:text-primary-container transition-all duration-300 border border-outline-variant/30">SVILUPPO</button>
+<button class="px-6 py-2 bg-transparent text-on-surface-variant font-label text-[0.6875rem] font-bold tracking-widest hover:text-primary-container transition-all duration-300 border border-outline-variant/30">PROGETTI PERSONALI</button>
+</div>
+</section>
+<!-- Project Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-20">
+<!-- Project Card 1 -->
+<article class="group relative flex flex-col surface-container-lowest overflow-hidden transition-all duration-500 card-glow">
+<div class="relative aspect-video overflow-hidden rounded-xl bg-surface-container">
+<img alt="Cyberpunk Environment" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" data-alt="cinematic shot of a neon-drenched cyberpunk city alleyway at night with wet pavement and glowing holographic signs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1sORroDwEFRsyZGvlf5JTRp1b4H-O9drlZ6EYYmewhpcOuP0yLs4k3C0OClLP9IFNM6IkqjY5fPg-h5AR-SDuktaWlWCjbRdZ9hiuEw6sTrJN2tb1mVKtyM65YjNqpUuvxF8_f0WCRJ7xkfFvEHU22tczkPAUGSoHtyqo6Vt3nhFj2VhYFMGzoHpaC_LDV6bifIZL6BtgcXsbuvT0aEz7kt9CD6YzwBCZDohEnSFhS_94mpvOgSrRlGCryBTdMlA5httO2gwb_Lpp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-4 left-4 flex gap-2">
+<span class="px-2 py-1 bg-surface-variant/60 backdrop-blur-md rounded-full text-[10px] font-label uppercase tracking-wider text-primary-fixed">Level Design</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline text-xl font-bold tracking-tight text-on-surface group-hover:text-primary-container transition-colors">NEON_VOID ARCADE</h3>
+<span class="font-label text-[10px] text-outline-variant uppercase">2024</span>
+</div>
+<div class="flex flex-wrap gap-2 mt-4">
+<span class="px-3 py-1 bg-surface-container-highest rounded-sm font-label text-[10px] text-on-surface-variant">UE5</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded-sm font-label text-[10px] text-on-surface-variant">MAYA</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded-sm font-label text-[10px] text-on-surface-variant">SUBSTANCE</span>
+</div>
+</div>
+</article>
+<!-- Project Card 2 -->
+<article class="group relative flex flex-col surface-container-lowest overflow-hidden transition-all duration-500 card-glow">
+<div class="relative aspect-video overflow-hidden rounded-xl bg-surface-container">
+<img alt="Mechanical Artifact" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" data-alt="high detail 3D render of a futuristic mechanical heart with glowing cyan wires and polished dark metal surfaces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUt7w3dkLehz8iMEwt-EDMYAv-R8n4JJihgf6vjdm1GArOBkpXZ6ytZV6no--3fx3szbUQKECdpb07eN4UDX9RbTB-poUuORUudmPXbLfLM0g12XvOmcLPE3j4STTpENT9YL2SyPv3_Kp-WKilG-iE5S5qL_d_UxTLS4MD0OKiRaMAR2pNAwlkB8CkBVgHbL5xxQir6wjE4fqEsE22fwCBPXlkwZScFHPGfvqjtFLlZncTZtQm9i9ye9qw1I-BYIR34EtdGYEqyINS"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-4 left-4 flex gap-2">
+<span class="px-2 py-1 bg-surface-variant/60 backdrop-blur-md rounded-full text-[10px] font-label uppercase tracking-wider text-primary-fixed">Character Art</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline text-xl font-bold tracking-tight text-on-surface group-hover:text-primary-container transition-colors">MECHA_UNIT_01</h3>
+<span class="font-label text-[10px] text-outline-variant uppercase">2023</span>
+</div>
+<div class="flex flex-wrap gap-2 mt-4">
+<span class="px-3 py-1 bg-surface-container-highest rounded-sm font-label text-[10px] text-on-surface-variant">BLENDER</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded-sm font-label text-[10px] text-on-surface-variant">ZBRUSH</span>
+</div>
+</div>
+</article>
+<!-- Project Card 3 -->
+<article class="group relative flex flex-col surface-container-lowest overflow-hidden transition-all duration-500 card-glow">
+<div class="relative aspect-video overflow-hidden rounded-xl bg-surface-container">
+<img alt="Digital Interface" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" data-alt="complex digital user interface with glowing blue grids, floating data points, and tech-noir aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnLh6bBZWju91aaAcTSoQKUjoIPuXLkdywz10p60j7tyXjUOkNu9-DEFJRULOgwBE6g3Cii3e6Wbo7oO5qdMP1Z8ySaTMR7scCepggWIHwoJKkIB7diQJ01tF6wN3ZtnlMRtlx4yZDAVQr-taf9dRTWFipbbMFpcA-COSUdu2vCiSWTKJQ2IL3xPdZNETq2TDYlHRs5txK1qWHrsfTJlHwtL75HwBx_u0_B7jVGXQb_WgB98esfLu3QVu36w8NO7ey6gWAHYa7m83a"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-4 left-4 flex gap-2">
+<span class="px-2 py-1 bg-surface-variant/60 backdrop-blur-md rounded-full text-[10px] font-label uppercase tracking-wider text-primary-fixed">Sviluppo</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline text-xl font-bold tracking-tight text-on-surface group-hover:text-primary-container transition-colors">CORE_ENGINE_HUD</h3>
+<span class="font-label text-[10px] text-outline-variant uppercase">2024</span>
+</div>
+<div class="flex flex-wrap gap-2 mt-4">
+<span class="px-3 py-1 bg-surface-container-highest rounded-sm font-label text-[10px] text-on-surface-variant">UNITY</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded-sm font-label text-[10px] text-on-surface-variant">C#</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded-sm font-label text-[10px] text-on-surface-variant">HLSL</span>
+</div>
+</div>
+</article>
+<!-- Project Card 4 -->
+<article class="group relative flex flex-col surface-container-lowest overflow-hidden transition-all duration-500 card-glow">
+<div class="relative aspect-video overflow-hidden rounded-xl bg-surface-container">
+<img alt="Esports Arena" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" data-alt="dynamic isometric 3D render of a futuristic esports arena with glowing stage lights and holographic displays" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyGVMayRFg6v3l4qj4P8FkupvndiP2qwkpyJHqfi8qHKlvUztnT9gliFfHpwURHFoQBDMDdgesvBuCAKD8F10kbwOx_aM2DyTmqCRhzPkAvNT_Hz7rEH7I7tCiV_RlWz8D_2h_e7TldLEIznH6UGgy4Jc6Y5QbgIG9600LWxX9xx2-3xXWbsNhLXhmoi_7EZtcSq6b1RabNFw105B4TYvgAHvxeqvVYrFRwOeKjSSQDcXTzZ9T6GUHwoqZ385GQG6DyRsKDhTbjC3d"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-4 left-4 flex gap-2">
+<span class="px-2 py-1 bg-surface-variant/60 backdrop-blur-md rounded-full text-[10px] font-label uppercase tracking-wider text-primary-fixed">Progetti Personali</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline text-xl font-bold tracking-tight text-on-surface group-hover:text-primary-container transition-colors">SYNTH_STADIUM</h3>
+<span class="font-label text-[10px] text-outline-variant uppercase">2023</span>
+</div>
+<div class="flex flex-wrap gap-2 mt-4">
+<span class="px-3 py-1 bg-surface-container-highest rounded-sm font-label text-[10px] text-on-surface-variant">3DS MAX</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded-sm font-label text-[10px] text-on-surface-variant">V-RAY</span>
+</div>
+</div>
+</article>
+<!-- Project Card 5 -->
+<article class="group relative flex flex-col surface-container-lowest overflow-hidden transition-all duration-500 card-glow">
+<div class="relative aspect-video overflow-hidden rounded-xl bg-surface-container">
+<img alt="Fluid Animation" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" data-alt="abstract fluid animation frame with swirling vibrant magenta and cyan liquid textures in deep space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOI75ouPTW6mi_48dqejBlG2fG4RcPai6s9AVH1cJ2l0a-vnWMg55fQeIF6QtXngYzf0vf8ppK8YyfwoPjKr1BVxNYAaZ9Y7Y6z4zxzauFBDfHpRXmckQ9qz73XnPH18T7VcM2hGV9TQNgH3hs7oIXgucKktcg34sQW9SIT9os5CW5732QVMgmKGnjuZTfB9kyKS7hqpe8Azf72LSqzG_ZMu2O-zf5ofRj-M8ESahvolMc3ZMMXsAtd45bo_iOKjK6Yp1ys2z7Bz-1"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-4 left-4 flex gap-2">
+<span class="px-2 py-1 bg-surface-variant/60 backdrop-blur-md rounded-full text-[10px] font-label uppercase tracking-wider text-primary-fixed">Animazione</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline text-xl font-bold tracking-tight text-on-surface group-hover:text-primary-container transition-colors">LIQUID_FLOW_04</h3>
+<span class="font-label text-[10px] text-outline-variant uppercase">2024</span>
+</div>
+<div class="flex flex-wrap gap-2 mt-4">
+<span class="px-3 py-1 bg-surface-container-highest rounded-sm font-label text-[10px] text-on-surface-variant">HOUDINI</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded-sm font-label text-[10px] text-on-surface-variant">OCTANE</span>
+</div>
+</div>
+</article>
+<!-- Project Card 6 -->
+<article class="group relative flex flex-col surface-container-lowest overflow-hidden transition-all duration-500 card-glow">
+<div class="relative aspect-video overflow-hidden rounded-xl bg-surface-container">
+<img alt="Sculpt" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" data-alt="close-up of a high-fidelity 3D character sculpt face with pores and fine details visible in soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhyvXVSRX9UhxnXyw9eCvcUhHsBbeDNig-EgO-CLGBSjGdgapzLDPMjXSp2LuzvIjdDg9XqQHDnjH6Nu-gK-m1b7DjpqbFQXSApf_wM28B93EW4IQjDNeYI_CMdkljT0jEL0-C1Lm0p61QrFvzYnY_gdAfTQeH1y2C7666zoqEamB6L4MQuc2fBmisUWEa8IY-p70G5SnGpz5CFa-jbUGMFCsMPP8jclsx1E7-xEFkbQ7klDWWsaXhcH_PNABmB-W3kKDa4ckXNR5g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-4 left-4 flex gap-2">
+<span class="px-2 py-1 bg-surface-variant/60 backdrop-blur-md rounded-full text-[10px] font-label uppercase tracking-wider text-primary-fixed">Modellazione 3D</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline text-xl font-bold tracking-tight text-on-surface group-hover:text-primary-container transition-colors">CYBORG_ANATOMY</h3>
+<span class="font-label text-[10px] text-outline-variant uppercase">2022</span>
+</div>
+<div class="flex flex-wrap gap-2 mt-4">
+<span class="px-3 py-1 bg-surface-container-highest rounded-sm font-label text-[10px] text-on-surface-variant">ZBRUSH</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded-sm font-label text-[10px] text-on-surface-variant">MARMOSET</span>
+</div>
+</div>
+</article>
+</section>
+<!-- Technical Specs / Stats Section (Editorial Break) -->
+<section class="py-24 mb-20 border-t border-outline-variant/10">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+<div>
+<div class="font-headline text-4xl font-black text-secondary mb-2">128+</div>
+<div class="font-label text-[0.6875rem] uppercase tracking-widest text-on-surface-variant">Modelli Completati</div>
+</div>
+<div>
+<div class="font-headline text-4xl font-black text-primary-container mb-2">04</div>
+<div class="font-label text-[0.6875rem] uppercase tracking-widest text-on-surface-variant">Anni di Esperienza</div>
+</div>
+<div>
+<div class="font-headline text-4xl font-black text-secondary mb-2">18</div>
+<div class="font-label text-[0.6875rem] uppercase tracking-widest text-on-surface-variant">Pipeline Strumenti</div>
+</div>
+<div>
+<div class="font-headline text-4xl font-black text-primary-container mb-2">100%</div>
+<div class="font-label text-[0.6875rem] uppercase tracking-widest text-on-surface-variant">Dedicazione Totale</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-40 pb-12 bg-[#0c0e17] dark:bg-[#0c0e17]">
+<div class="flex flex-col md:flex-row justify-between items-center px-10 border-t border-[#3b494b]/20 pt-12 max-w-[1440px] mx-auto">
+<div class="flex flex-col mb-8 md:mb-0">
+<div class="text-lg font-bold text-[#e1e1ef] mb-2">NEON CURATOR</div>
+<div class="font-['Manrope'] text-[0.6875rem] uppercase tracking-[0.2em] font-light text-[#b9cacb]">
+                    ©2024 NEON CURATOR / ARTIFACT ARCHIVE
+                </div>
+</div>
+<div class="flex space-x-8">
+<a class="font-['Manrope'] text-[0.6875rem] uppercase tracking-[0.2em] font-light text-[#b9cacb] hover:text-[#dbfcff] transition-colors duration-500 ease-out cursor-crosshair" href="#">INSTAGRAM</a>
+<a class="font-['Manrope'] text-[0.6875rem] uppercase tracking-[0.2em] font-light text-[#b9cacb] hover:text-[#dbfcff] transition-colors duration-500 ease-out cursor-crosshair" href="#">ARTSTATION</a>
+<a class="font-['Manrope'] text-[0.6875rem] uppercase tracking-[0.2em] font-light text-[#b9cacb] hover:text-[#dbfcff] transition-colors duration-500 ease-out cursor-crosshair" href="#">LINKEDIN</a>
+<a class="font-['Manrope'] text-[0.6875rem] uppercase tracking-[0.2em] font-light text-[#b9cacb] hover:text-[#dbfcff] transition-colors duration-500 ease-out cursor-crosshair" href="#">GITHUB</a>
+</div>
+</div>
+</footer>
+</body></html>

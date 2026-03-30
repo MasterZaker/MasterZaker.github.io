@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chi Sono | Gaspare Cipolletta — NEON_CURATOR</title>
+<meta name="description" content="Scopri chi è Gaspare Cipolletta: Game Designer, Technical Artist e modellatore 3D con passione per mondi immersivi e narrative interattive."/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=Manrope:wght@400;500;700;800&amp;family=Orbitron:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-variant": "#32343e",
+              "surface-tint": "#00dbe9",
+              "on-primary-container": "#006970",
+              "on-tertiary": "#3b2f00",
+              "on-primary": "#00363a",
+              "on-background": "#e1e1ef",
+              "tertiary-fixed": "#ffe179",
+              "tertiary": "#fff5de",
+              "primary-container": "#00f0ff",
+              "on-error": "#690005",
+              "surface-container-lowest": "#0c0e17",
+              "surface-container-high": "#282933",
+              "surface": "#11131c",
+              "on-surface": "#e1e1ef",
+              "secondary-container": "#7000ff",
+              "on-error-container": "#ffdad6",
+              "surface-bright": "#373943",
+              "on-tertiary-fixed": "#231b00",
+              "inverse-surface": "#e1e1ef",
+              "surface-dim": "#11131c",
+              "surface-container-low": "#191b24",
+              "primary-fixed-dim": "#00dbe9",
+              "on-secondary-container": "#ddcdff",
+              "primary": "#dbfcff",
+              "inverse-on-surface": "#2e303a",
+              "inverse-primary": "#006970",
+              "surface-container-highest": "#32343e",
+              "on-primary-fixed-variant": "#004f54",
+              "on-secondary-fixed-variant": "#5700c9",
+              "error-container": "#93000a",
+              "surface-container": "#1d1f29",
+              "on-tertiary-fixed-variant": "#554500",
+              "outline": "#849495",
+              "on-tertiary-container": "#715d00",
+              "primary-fixed": "#7df4ff",
+              "error": "#ffb4ab",
+              "secondary": "#d1bcff",
+              "on-surface-variant": "#b9cacb",
+              "on-primary-fixed": "#002022",
+              "on-secondary": "#3c0090",
+              "secondary-fixed": "#e9ddff",
+              "tertiary-fixed-dim": "#eac324",
+              "on-secondary-fixed": "#23005b",
+              "background": "#11131c",
+              "tertiary-container": "#fed639",
+              "secondary-fixed-dim": "#d1bcff",
+              "outline-variant": "#3b494b",
+              "accent-pink": "#f92a82"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Manrope"],
+              "display": ["Orbitron"],
+              "orbitron": ["Orbitron"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .cyber-border {
+            position: relative;
+        }
+        .cyber-border::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #00f0ff, #f92a82, transparent);
+            opacity: 0.5;
+        }
+        .neon-glow-cyan {
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+        }
+        .neon-glow-magenta {
+            box-shadow: 0 0 15px rgba(249, 42, 130, 0.3);
+        }
+        .glass-panel {
+            background: rgba(17, 19, 28, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        #mobile-menu { display: none; }
+        #mobile-menu.open { display: flex; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-[#11131c]/60 backdrop-blur-xl border-b border-[#3b494b]/20 shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
+<div class="relative flex items-center px-8 h-20 w-full max-w-[1920px] mx-auto">
+<a href="index.html" class="text-2xl font-black tracking-tighter text-[#00f0ff] drop-shadow-[0_0_8px_rgba(0,240,255,0.5)] font-display">
+                ZAKER
+            </a>
+<nav class="hidden md:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
+<a class="text-[#e1e1ef]/60 hover:text-[#e1e1ef] transition-colors font-['Space_Grotesk'] uppercase tracking-widest text-sm" href="index.html">HOME</a>
+<a class="text-[#e1e1ef]/60 hover:text-[#e1e1ef] transition-colors font-['Space_Grotesk'] uppercase tracking-widest text-sm" href="archivio.html">ARCHIVIO</a>
+<a class="text-[#00f0ff] border-b-2 border-[#00f0ff] pb-1 font-['Space_Grotesk'] uppercase tracking-widest text-sm" href="chi-sono.html">CHI SONO</a>
+</nav>
+<div class="ml-auto flex items-center gap-4">
+<a href="chi-sono.html" class="hidden md:block bg-primary text-on-primary font-headline font-bold px-6 py-2 text-sm tracking-widest rounded-sm hover:bg-surface-tint transition-all active:scale-95 duration-200">HIRE_ME</a>
+<button onclick="document.getElementById('mobile-menu').classList.toggle('open')" class="md:hidden text-on-surface-variant cursor-pointer">
+    <span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="flex-col gap-4 px-8 pb-6 bg-[#11131c]/95 border-t border-[#3b494b]/20">
+    <a href="index.html" class="text-[#e1e1ef]/70 font-['Space_Grotesk'] uppercase tracking-widest text-sm py-2">HOME</a>
+    <a href="archivio.html" class="text-[#e1e1ef]/70 font-['Space_Grotesk'] uppercase tracking-widest text-sm py-2">ARCHIVIO</a>
+    <a href="chi-sono.html" class="text-[#00f0ff] font-['Space_Grotesk'] uppercase tracking-widest text-sm py-2">CHI SONO</a>
+</div>
+</header>
+<main class="pt-32 pb-20 px-6 max-w-7xl mx-auto space-y-40">
+<!-- Section 1: Hero / Presentazione -->
+<section class="flex flex-col lg:flex-row items-center gap-16">
+<div class="flex-1 space-y-8 text-left">
+<div class="space-y-2">
+<span class="font-label text-xs tracking-[0.2em] text-[#f92a82] uppercase">Game Designer</span>
+<h1 class="font-display text-5xl md:text-7xl font-bold leading-none tracking-tighter">
+                        GASPARE <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00f0ff] to-[#f92a82]">CIPOLLETTA</span>
+</h1>
+</div>
+<p class="text-lg text-on-surface-variant max-w-xl leading-relaxed font-light">
+                    Scolpisco mondi digitali dove la fisica incontra l'immaginazione. Game Designer di giorno, Modellatore 3D di notte, costruisco esperienze immersive che sfidano i confini della percezione spaziale e della narrazione interattiva.
+                </p>
+<div class="flex gap-4">
+<button class="bg-[#dbfcff] text-[#00363a] px-8 py-3 font-label font-bold text-xs uppercase tracking-widest rounded-sm hover:shadow-[0_0_20px_rgba(0,219,233,0.4)] transition-all">
+                        Scarica CV
+                    </button>
+<a href="archivio.html" class="border border-outline/40 text-on-surface px-8 py-3 font-label font-bold text-xs uppercase tracking-widest rounded-sm hover:bg-surface-container-high transition-all">
+                        Progetti
+                    </a>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-gradient-to-tr from-[#00f0ff] to-[#f92a82] opacity-20 blur-2xl group-hover:opacity-40 transition-opacity"></div>
+<div class="w-80 h-80 md:w-96 md:h-96 bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden relative z-10">
+<img alt="Gaspare Cipolletta Profile" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhZnhWToCkGHf-YRflEkyuADer88_NvIWXnv5jEYKrIfICvHWmqzEGnnUqlrAwkmiGnsT_0SnLPTGRhlhnP06_-d5us1TE4rkWvmVtJG9CJOC-Z_TuTedE1sPWuu_I4_2mJtItDcIkquwsHPJewubcWTTLS6WIQifRwcrQuPSgCHzTUmX1UpIhZ9wJd0GLFUtDMCWQRRQg4vq5ukaAII_qLFQz025qrdZ07ImRba5VbNBEu6MfSdn_ULeQwMNgBX5FnHMiOBpT7ZHM"/>
+<div class="absolute bottom-4 left-4 right-4 p-4 glass-panel border border-white/10 rounded-lg">
+<div class="flex justify-between items-center">
+<span class="font-orbitron text-[10px] text-[#00f0ff]">STATUS: ONLINE</span>
+<span class="font-orbitron text-[10px] text-[#f92a82]">VER_2.0.24</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Hobby e Passioni (Bento Style) -->
+<section class="space-y-12">
+<div class="space-y-2 border-l-4 border-[#f92a82] pl-6">
+<h2 class="font-display text-3xl font-bold tracking-tight uppercase">Core Drives</h2>
+<p class="font-label text-sm text-on-surface-variant uppercase tracking-widest">Cosa alimenta il mio motore creativo</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<!-- Gaming -->
+<div class="md:col-span-2 bg-surface-container-low p-8 rounded-xl border border-outline-variant/10 hover:border-[#00f0ff]/40 transition-all group relative overflow-hidden">
+<div class="absolute -right-10 -bottom-10 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-[12rem]">sports_esports</span>
+</div>
+<div class="relative z-10 space-y-4">
+<span class="material-symbols-outlined text-[#00f0ff] text-4xl">sports_esports</span>
+<h3 class="font-headline text-2xl font-bold">Gaming</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Non solo intrattenimento, ma analisi continua di meccaniche, loop di gameplay e architettura dei livelli.</p>
+</div>
+</div>
+<!-- Arte 3D -->
+<div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/10 hover:border-[#f92a82]/40 transition-all group">
+<div class="space-y-4">
+<span class="material-symbols-outlined text-[#f92a82] text-4xl">3d_rotation</span>
+<h3 class="font-headline text-2xl font-bold">Arte 3D</h3>
+<p class="text-sm text-on-surface-variant">La manipolazione della geometria per creare mondi tangibili.</p>
+</div>
+</div>
+<!-- Storytelling -->
+<div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/10 hover:border-[#00f0ff]/40 transition-all group">
+<div class="space-y-4">
+<span class="material-symbols-outlined text-[#00f0ff] text-4xl">auto_stories</span>
+<h3 class="font-headline text-2xl font-bold">Story</h3>
+<p class="text-sm text-on-surface-variant">Narrazione ambientale e world-building strutturato.</p>
+</div>
+</div>
+<!-- Tecnologia -->
+<div class="md:col-span-4 bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/10 flex flex-col md:flex-row items-center gap-8 hover:bg-surface-container transition-colors">
+<div class="p-4 bg-surface-container-highest rounded-full">
+<span class="material-symbols-outlined text-4xl text-[#f92a82]">memory</span>
+</div>
+<div class="flex-1 space-y-2 text-center md:text-left">
+<h3 class="font-headline text-2xl font-bold uppercase tracking-tight">Tecnologia &amp; Innovazione</h3>
+<p class="text-on-surface-variant max-w-2xl">Sempre alla ricerca dell'ultimo plugin, dell'integrazione AI o della nuova release engine che sposti l'asticella del possibile.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3 & 4: Skills Split -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24">
+<!-- Hard Skills -->
+<section class="space-y-12">
+<div class="space-y-2 border-l-4 border-[#00f0ff] pl-6">
+<h2 class="font-display text-3xl font-bold tracking-tight uppercase">Technical Specs</h2>
+<p class="font-label text-sm text-on-surface-variant uppercase tracking-widest">Strumenti e Maestria</p>
+</div>
+<div class="space-y-8">
+<div class="space-y-3">
+<div class="flex justify-between items-end">
+<span class="font-headline font-bold text-lg">Unity &amp; C#</span>
+<span class="font-orbitron text-xs text-[#00f0ff]">92%</span>
+</div>
+<div class="h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-[#00f0ff] w-[92%] shadow-[0_0_10px_#00f0ff]"></div>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-end">
+<span class="font-headline font-bold text-lg">Blender</span>
+<span class="font-orbitron text-xs text-[#f92a82]">88%</span>
+</div>
+<div class="h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-[#f92a82] w-[88%] shadow-[0_0_10px_#f92a82]"></div>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-end">
+<span class="font-headline font-bold text-lg">Houdini</span>
+<span class="font-orbitron text-xs text-[#00f0ff]">75%</span>
+</div>
+<div class="h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-[#00f0ff] w-[75%] shadow-[0_0_10px_#00f0ff]"></div>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-end">
+<span class="font-headline font-bold text-lg">Level Design</span>
+<span class="font-orbitron text-xs text-[#f92a82]">95%</span>
+</div>
+<div class="h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-[#f92a82] w-[95%] shadow-[0_0_10px_#f92a82]"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Soft Skills -->
+<section class="space-y-12">
+<div class="space-y-2 border-l-4 border-[#f92a82] pl-6">
+<h2 class="font-display text-3xl font-bold tracking-tight uppercase">Operational Protocol</h2>
+<p class="font-label text-sm text-on-surface-variant uppercase tracking-widest">Metodo e Attitudine</p>
+</div>
+<div class="flex flex-wrap gap-4">
+<div class="bg-surface-container-low border border-[#00f0ff]/20 px-6 py-4 rounded-xl flex items-center gap-4 hover:bg-[#00f0ff]/10 transition-colors cursor-default group">
+<span class="material-symbols-outlined text-[#00f0ff]">groups</span>
+<span class="font-headline font-medium">Teamwork Sync</span>
+</div>
+<div class="bg-surface-container-low border border-[#f92a82]/20 px-6 py-4 rounded-xl flex items-center gap-4 hover:bg-[#f92a82]/10 transition-colors cursor-default group">
+<span class="material-symbols-outlined text-[#f92a82]">psychology</span>
+<span class="font-headline font-medium">Problem Solver</span>
+</div>
+<div class="bg-surface-container-low border border-[#00f0ff]/20 px-6 py-4 rounded-xl flex items-center gap-4 hover:bg-[#00f0ff]/10 transition-colors cursor-default group">
+<span class="material-symbols-outlined text-[#00f0ff]">terminal</span>
+<span class="font-headline font-medium">Logic Driven</span>
+</div>
+<div class="bg-surface-container-low border border-[#f92a82]/20 px-6 py-4 rounded-xl flex items-center gap-4 hover:bg-[#f92a82]/10 transition-colors cursor-default group">
+<span class="material-symbols-outlined text-[#f92a82]">update</span>
+<span class="font-headline font-medium">Fast Learner</span>
+</div>
+<div class="bg-surface-container-low border border-[#00f0ff]/20 px-6 py-4 rounded-xl flex items-center gap-4 hover:bg-[#00f0ff]/10 transition-colors cursor-default group">
+<span class="material-symbols-outlined text-[#00f0ff]">architecture</span>
+<span class="font-headline font-medium">Detail Oriented</span>
+</div>
+</div>
+<!-- Quote Section -->
+<div class="mt-12 p-8 bg-surface-container-lowest rounded-xl border-l-8 border-[#00f0ff] relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-6xl">format_quote</span>
+</div>
+<p class="italic text-lg text-on-surface leading-relaxed relative z-10">
+                        "La differenza tra un buon gioco e un'esperienza indimenticabile risiede nella cura ossessiva per i dettagli che nessuno nota consapevolmente, ma che tutti percepiscono."
+                    </p>
+</div>
+</section>
+</div>
+</main>
+<!-- Pronto per il Next Level -->
+<section class="py-24 px-8 md:px-20 max-w-[1920px] mx-auto">
+<div class="bg-surface-container-lowest rounded-2xl p-12 border border-outline-variant/20 relative overflow-hidden flex flex-col md:flex-row items-center gap-12">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary-container/5 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-accent-pink/5 blur-[120px] rounded-full"></div>
+<div class="relative z-10 flex-1">
+<h2 class="font-display text-3xl font-bold text-on-surface mb-4 uppercase">Pronto per il <span class="text-accent-pink">Next Level?</span></h2>
+<p class="font-body text-on-surface-variant max-w-md">Collaboriamo per trasformare la tua visione in una realtà interattiva. Disponibile per freelance e consulenze tecniche.</p>
+</div>
+<div class="relative z-10 w-full md:w-auto">
+<div class="flex flex-col sm:flex-row gap-4">
+<input class="bg-surface-container-high border-outline/20 text-on-surface px-6 py-4 font-label text-sm min-w-[300px] focus:ring-1 focus:ring-primary-container focus:border-primary-container outline-none transition-all uppercase tracking-widest" placeholder="IL_TUO_EMAIL@PROVIDER.COM" type="email"/>
+<button class="bg-primary-container text-on-primary px-8 py-4 font-headline font-black uppercase tracking-widest hover:bg-surface-tint transition-all active:scale-95">CONNETTITI</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#0c0e17] w-full py-12 px-8">
+<div class="flex flex-col gap-6 max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="text-[#00f0ff] font-bold text-xl font-display tracking-tighter">ZAKER <span class="text-on-surface-variant/40 font-light font-body">| GAME_DEV</span></div>
+<div class="font-['Manrope'] text-[0.75rem] tracking-[0.1em] uppercase text-[#b9cacb]">
+                ©2026 GASPARE CIPOLLETTA A.K.A ZAKER. ALL RIGHTS RESERVED.
+            </div>
+</div>
+<div class="flex justify-center gap-8 font-['Manrope'] text-[0.75rem] tracking-[0.1em] uppercase text-[#b9cacb] border-t border-[#3b494b]/10 pt-6">
+<a class="hover:text-[#dbfcff] transition-all opacity-80 hover:opacity-100" href="#">INSTAGRAM</a>
+<a class="hover:text-[#dbfcff] transition-all opacity-80 hover:opacity-100" href="#">ARTSTATION</a>
+<a class="hover:text-[#dbfcff] transition-all opacity-80 hover:opacity-100" href="#">LINKEDIN</a>
+<a class="hover:text-[#dbfcff] transition-all opacity-80 hover:opacity-100" href="#">GITHUB</a>
+</div>
+</div>
+</footer>
+<!-- Custom Cursor -->
+<style>
+  *, *::before, *::after { cursor: none !important; }
+  #zk-cursor {
+    position: fixed;
+    top: 0; left: 0;
+    width: 32px; height: 32px;
+    pointer-events: none;
+    z-index: 2147483647;
+    will-change: transform;
+    transition: opacity 0.2s;
+  }
+  #zk-cursor svg {
+    filter:
+      drop-shadow(0 0 3px #00f0ff)
+      drop-shadow(0 0 8px rgba(0,240,255,0.55))
+      drop-shadow(0 0 18px rgba(0,240,255,0.25));
+    transition: filter 0.15s ease;
+  }
+  #zk-cursor.zk-click svg {
+    filter:
+      drop-shadow(0 0 4px #f92a82)
+      drop-shadow(0 0 10px rgba(249,42,130,0.65))
+      drop-shadow(0 0 20px rgba(249,42,130,0.3));
+    transform: scale(0.88);
+  }
+  #zk-cursor.zk-hover svg {
+    filter:
+      drop-shadow(0 0 5px #00f0ff)
+      drop-shadow(0 0 14px rgba(0,240,255,0.7))
+      drop-shadow(0 0 26px rgba(0,240,255,0.35));
+    transform: scale(1.15);
+  }
+</style>
+<div id="zk-cursor" aria-hidden="true">
+  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 16 3 L 5 28 L 16 22 L 27 28 Z" fill="#00f0ff"/>
+    <path d="M 16 3 L 16 22 L 27 28 Z" fill="#f92a82"/>
+    <circle cx="16" cy="3" r="1.5" fill="#ffffff" opacity="0.9"/>
+  </svg>
+</div>
+<script>
+(function(){
+  var cur = document.getElementById('zk-cursor');
+  if (!cur) return;
+  window.addEventListener('mousemove', function(e){
+    cur.style.transform = 'translate(' + (e.clientX - 16) + 'px,' + (e.clientY - 3) + 'px)';
+  }, { passive: true });
+  window.addEventListener('mousedown', function(){ cur.classList.add('zk-click'); });
+  window.addEventListener('mouseup',   function(){ cur.classList.remove('zk-click'); });
+  var interactors = 'a, button, input, [role="button"], label';
+  document.querySelectorAll(interactors).forEach(function(el){
+    el.addEventListener('mouseenter', function(){ cur.classList.add('zk-hover'); });
+    el.addEventListener('mouseleave', function(){ cur.classList.remove('zk-hover'); });
+  });
+  document.addEventListener('mouseleave',  function(){ cur.style.opacity = '0'; });
+  document.addEventListener('mouseenter',  function(){ cur.style.opacity = '1'; });
+})();
+</script>
+</body></html>
+

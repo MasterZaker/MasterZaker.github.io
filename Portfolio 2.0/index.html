@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NEON_CURATOR | Portfolio Game Design &amp; 3D</title>
+<meta name="description" content="Portfolio di Gaspare Cipolletta — Game Designer e Technical Artist specializzato in 3D, modellazione e sviluppo in Unreal Engine 5."/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=Manrope:wght@300;400;500;600;800&amp;family=Orbitron:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-low": "#191b24",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed": "#e9ddff",
+                        "on-tertiary-fixed-variant": "#554500",
+                        "on-secondary": "#3c0090",
+                        "tertiary": "#fff5de",
+                        "on-background": "#e1e1ef",
+                        "tertiary-container": "#fed639",
+                        "surface-tint": "#00dbe9",
+                        "surface-dim": "#11131c",
+                        "on-secondary-fixed": "#23005b",
+                        "background": "#11131c",
+                        "inverse-surface": "#e1e1ef",
+                        "primary-fixed-dim": "#00dbe9",
+                        "on-primary-container": "#006970",
+                        "on-primary-fixed": "#002022",
+                        "on-error": "#690005",
+                        "surface-container-lowest": "#0c0e17",
+                        "on-tertiary-fixed": "#231b00",
+                        "primary": "#dbfcff",
+                        "outline": "#849495",
+                        "on-tertiary-container": "#715d00",
+                        "on-secondary-container": "#ddcdff",
+                        "surface-container": "#1d1f29",
+                        "surface-bright": "#373943",
+                        "inverse-on-surface": "#2e303a",
+                        "primary-container": "#00f0ff",
+                        "on-surface-variant": "#b9cacb",
+                        "tertiary-fixed-dim": "#eac324",
+                        "surface": "#11131c",
+                        "secondary-container": "#7000ff",
+                        "outline-variant": "#3b494b",
+                        "on-primary-fixed-variant": "#004f54",
+                        "error-container": "#93000a",
+                        "error": "#ffb4ab",
+                        "surface-container-high": "#282933",
+                        "inverse-primary": "#006970",
+                        "secondary-fixed-dim": "#d1bcff",
+                        "on-primary": "#00363a",
+                        "on-tertiary": "#3b2f00",
+                        "surface-variant": "#32343e",
+                        "tertiary-fixed": "#ffe179",
+                        "surface-container-highest": "#32343e",
+                        "primary-fixed": "#7df4ff",
+                        "secondary": "#d1bcff",
+                        "on-secondary-fixed-variant": "#5700c9",
+                        "on-surface": "#e1e1ef",
+                        "accent-pink": "#f92a82"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Manrope"],
+                        "display": ["Orbitron"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .neon-glow-primary {
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+        }
+        .neon-glow-pink {
+            box-shadow: 0 0 15px rgba(249, 42, 130, 0.3);
+        }
+        .glass-card {
+            background: rgba(50, 52, 62, 0.4);
+            backdrop-filter: blur(12px);
+        }
+        .asymmetric-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Mobile menu */
+        #mobile-menu { display: none; }
+        #mobile-menu.open { display: flex; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-[#11131c]/60 backdrop-blur-xl border-b border-[#3b494b]/20 shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
+<div class="relative flex items-center px-8 h-20 w-full max-w-[1920px] mx-auto">
+<a href="index.html" class="text-2xl font-black tracking-tighter text-[#00f0ff] drop-shadow-[0_0_8px_rgba(0,240,255,0.5)] font-display">
+                ZAKER
+            </a>
+<nav class="hidden md:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
+<a class="text-[#00f0ff] border-b-2 border-[#00f0ff] pb-1 font-['Space_Grotesk'] uppercase tracking-widest text-sm" href="index.html">HOME</a>
+<a class="text-[#e1e1ef]/60 hover:text-[#e1e1ef] transition-colors font-['Space_Grotesk'] uppercase tracking-widest text-sm" href="archivio.html">ARCHIVIO</a>
+<a class="text-[#e1e1ef]/60 hover:text-[#e1e1ef] transition-colors font-['Space_Grotesk'] uppercase tracking-widest text-sm" href="chi-sono.html">CHI SONO</a>
+</nav>
+<div class="ml-auto flex items-center gap-6">
+<button id="hamburger-btn" class="md:hidden text-on-surface-variant cursor-pointer" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+</div>
+</div>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="flex-col gap-4 px-8 pb-6 bg-[#11131c]/95 border-t border-[#3b494b]/20">
+    <a href="index.html" class="text-[#00f0ff] font-['Space_Grotesk'] uppercase tracking-widest text-sm py-2">HOME</a>
+    <a href="archivio.html" class="text-[#e1e1ef]/70 hover:text-[#e1e1ef] font-['Space_Grotesk'] uppercase tracking-widest text-sm py-2">ARCHIVIO</a>
+    <a href="chi-sono.html" class="text-[#e1e1ef]/70 hover:text-[#e1e1ef] font-['Space_Grotesk'] uppercase tracking-widest text-sm py-2">CHI SONO</a>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center justify-center px-8 md:px-20 overflow-hidden text-center">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-b from-background/60 via-background/70 to-background z-10"></div>
+<img alt="Hero Character" class="w-full h-full object-cover object-center opacity-30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbrEQBN3eNXc1-DR2Ls5JMjadPec_wKdyMAVPJg08jDOvU18aPpmHM4K6IBg07f_xrGvvmVbCqvvIZsfYJ4CYuIZF4fBeleQdPSvsE7GtCWMLWT_T90fDisvrg7CyIcdCQFsKlhds-guuMxRPTKLsVk0944JmIMdzL9q5Pyf90qCooEcxlMeXCLz0L5hvZADtMXh17HgR2MCKdJVRoCiFnzrkUbvBaEbQX-g5gPqgH3oV9R3wuKetDg_cQ2DDlSCE4d1itmtNM_hj2"/>
+</div>
+<div class="relative z-20 max-w-4xl mx-auto">
+<div class="flex items-center justify-center gap-4 mb-6">
+<span class="h-[2px] w-12 bg-accent-pink"></span>
+<span class="font-label text-accent-pink tracking-[0.3em] text-xs font-bold uppercase">Game Design &amp; Technical Art</span>
+<span class="h-[2px] w-12 bg-accent-pink"></span>
+</div>
+<h1 class="font-display text-6xl md:text-8xl font-bold leading-none mb-8 text-on-surface uppercase tracking-tighter">
+                    Dall'idea al <span class="text-primary-container drop-shadow-[0_0_15px_rgba(0,240,255,0.6)]">gameplay</span>
+</h1>
+<p class="font-body text-xl text-on-surface-variant max-w-xl mx-auto mb-12 leading-relaxed">
+                    Creazione di mondi immersivi attraverso modellazione high-poly, ottimizzazione per motori real-time e architetture di gioco scalabili.
+                </p>
+<div class="flex flex-wrap gap-4 justify-center">
+<a href="archivio.html" class="bg-primary-container text-on-primary px-8 py-4 font-headline font-bold uppercase tracking-widest flex items-center gap-2 hover:shadow-[0_0_25px_rgba(0,240,255,0.4)] transition-all">
+                        VEDI PROGETTI <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<a href="chi-sono.html" class="border border-outline/40 text-on-surface px-8 py-4 font-headline font-bold uppercase tracking-widest hover:bg-surface-variant/20 transition-all">
+                        IL MIO PROCESSO
+                    </a>
+</div>
+</div>
+</section>
+<!-- Stats / Quick Info -->
+<section class="grid grid-cols-2 md:grid-cols-3 border-y border-outline-variant/20 bg-surface-container-lowest">
+<div class="p-8 border-r border-outline-variant/20 flex flex-col items-center text-center">
+<span class="font-display text-3xl text-primary-container mb-1">0</span>
+<span class="font-label text-[0.6rem] text-on-surface-variant tracking-widest uppercase">Modelli 3D Completati</span>
+</div>
+<div class="p-8 border-r border-outline-variant/20 flex flex-col items-center text-center">
+<span class="font-display text-3xl text-primary-container mb-1">01</span>
+<span class="font-label text-[0.6rem] text-on-surface-variant tracking-widest uppercase">Anni di Esperienza</span>
+</div>
+<div class="p-8 flex flex-col items-center text-center">
+<span class="font-display text-3xl text-accent-pink mb-1">Unity 3D</span>
+<span class="font-label text-[0.6rem] text-on-surface-variant tracking-widest uppercase">Engine Primario</span>
+</div>
+</section>
+<!-- Anteprima Progetti Section -->
+<section class="py-24 px-8 md:px-20 max-w-[1920px] mx-auto">
+<div class="mb-12">
+<h2 class="font-display text-4xl font-bold text-on-surface mb-4 uppercase tracking-tight">Anteprima Progetti</h2>
+<div class="h-1 w-24 bg-gradient-to-r from-primary-container to-accent-pink mb-4"></div>
+<p class="font-label text-on-surface-variant text-xs uppercase tracking-widest">Selezione casuale dai miei lavori — <a href="archivio.html" class="text-primary-container hover:underline">Vedi archivio completo →</a></p>
+</div>
+<!-- Random project grid, populated by JS -->
+<div id="random-projects" class="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+</section>
+<script>
+(function(){
+  const ALL_PROJECTS = [
+    { title:'Neon Hub Corridor', tag:'MODELLAZIONE 3D', sub:'MAYA', wide:true,
+      img:'https://lh3.googleusercontent.com/aida-public/AB6AXuAf5o2EQ1fPQs_7gwXKDp_2kMvWdX-X2uZbfcifqS1pSrc72kSEIyXSYqtZOsmAlVJ-bbAen5xPeGnwpF4LyCgQzMqL0UJueTEXjQM3wS7OO_gnSJIcqZ5KTWZfbU_ICyio1CaJWgI-fwwXWII3LivH-fmIDhdFus3AOCIFfLuqWgULf46UaFFb_c7YKLHNs7hE2IDXVVrJLTQFofyEut2_yg0JS-5I85oNCqimRnf5qPkupKs2nQKy3ZntqOjphLYUJaLnW5GF1iZT',
+      desc:'Ottimizzazione di asset ambientali modulari con workflow PBR.' },
+    { title:'The Harbinger', tag:'WIP', sub:'ZBRUSH', wide:false,
+      img:'https://lh3.googleusercontent.com/aida-public/AB6AXuCPkK257SzPHdqoMMQ7BfdLRdQl3j2K3TRVq48rl_BOPz6S75K-52_dvYE-REPYv9Wb9sokoPiapRSzsHctoGia0odnQzERSk5p0hmYH2mcWll-eHY5-zt0yfmjozri6Nb83DDil7Dsuw0SBFnLKM9m5Tr-9khw5FT6bzdKxbBYNG2FfD6BVO7VRh5ByEYZ4MlPbm7GMG3AkDvFrn4ZTbvcwbszRE9rgt9LRptTFdm1zyz5GRxuH2wUqkAf4c_jghtP2vKFizlj8_EP',
+      desc:'Sculpt organico high-poly in fase di rifinitura.' },
+    { title:'Clockwork Combat', tag:'ANIMATION', sub:'BLENDER', wide:false,
+      img:'https://lh3.googleusercontent.com/aida-public/AB6AXuCpChDr79qPpqtZS8NQggiahPeRHLk5lfh1hXS-8e-K94z6t8_NJpQp78flIJaAnIx3HbUUZL7yOjLxeq3QRrL4Ic2ZFSi03fwtuy7D1vAhb3Htm_1bIZeYPFUS4SDFJUA9D7qpb7Dsz8kb9lq_yvZoFmy14oeSWP0PTQKK5N3u5Vuc7gnHP55VgqFVJd-RVx56KaAfw-CPkvupysUde6R39PT39Q-pMSroOR_3buUJ-IS8-aSFf2dDad_KoGfWm2r8gDMJNQCTm_Iq',
+      desc:'Animazione robotica steampunk con rig procedurale.' },
+    { title:'Project: AEON', tag:'GAME DEV', sub:'UNITY', wide:true,
+      img:'https://lh3.googleusercontent.com/aida-public/AB6AXuCGYxb4ja0ypeo0x5Tunvn16Fb84DOJ7hgwCcmrHEBmtGNt0g9VxnPGp2z54lJjSsDTsN_uQFPNmqE8ulHrpU9ZJ9ZDPuE6RhFlUOC3SDfdqO4FbLxUr--f-VDk3FwJk_NntcwOqTU3dB5FZt8ckMSe2oqPqQCcitscgMgXwtMtNNU7QOa2qidPBOr3vmpww44QbFXaZUcShL3fnJo32AavDCn3BEUBbZ0lQPmhvjjUpLaj_DQtvLd-Fy3Iwj7sF-WjJDi_PI5hpkeW',
+      desc:'Prototipo Action-RPG con inventario dinamico.' },
+    { title:'NEON_VOID ARCADE', tag:'LEVEL DESIGN', sub:'UE5', wide:false,
+      img:'https://lh3.googleusercontent.com/aida-public/AB6AXuB1sORroDwEFRsyZGvlf5JTRp1b4H-O9drlZ6EYYmewhpcOuP0yLs4k3C0OClLP9IFNM6IkqjY5fPg-h5AR-SDuktaWlWCjbRdZ9hiuEw6sTrJN2tb1mVKtyM65YjNqpUuvxF8_f0WCRJ7xkfFvEHU22tczkPAUGSoHtyqo6Vt3nhFj2VhYFMGzoHpaC_LDV6bifIZL6BtgcXsbuvT0aEz7kt9CD6YzwBCZDohEnSFhS_94mpvOgSrRlGCryBTdMlA5httO2gwb_Lpp',
+      desc:'Ambiente cyberpunk con volumetric lighting e nanite.' },
+    { title:'MECHA_UNIT_01', tag:'CHARACTER ART', sub:'BLENDER', wide:false,
+      img:'https://lh3.googleusercontent.com/aida-public/AB6AXuCUt7w3dkLehz8iMEwt-EDMYAv-R8n4JJihgf6vjdm1GArOBkpXZ6ytZV6no--3fx3szbUQKECdpb07eN4UDX9RbTB-poUuORUudmPXbLfLM0g12XvOmcLPE3j4STTpENT9YL2SyPv3_Kp-WKilG-iE5S5qL_d_UxTLS4MD0OKiRaMAR2pNAwlkB8CkBVgHbL5xxQir6wjE4fqEsE22fwCBPXlkwZScFHPGfvqjtFLlZncTZtQm9i9ye9qw1I-BYIR34EtdGYEqyINS',
+      desc:'Cuore meccanico futuristico in stile hard-surface.' },
+    { title:'LIQUID_FLOW_04', tag:'ANIMAZIONE', sub:'HOUDINI', wide:true,
+      img:'https://lh3.googleusercontent.com/aida-public/AB6AXuBOI75ouPTW6mi_48dqejBlG2fG4RcPai6s9AVH1cJ2l0a-vnWMg55fQeIF6QtXngYzf0vf8ppK8YyfwoPjKr1BVxNYAaZ9Y7Y6z4zxzauFBDfHpRXmckQ9qz73XnPH18T7VcM2hGV9TQNgH3hs7oIXgucKktcg34sQW9SIT9os5CW5732QVMgmKGnjuZTfB9kyKS7hqpe8Azf72LSqzG_ZMu2O-zf5ofRj-M8ESahvolMc3ZMMXsAtd45bo_iOKjK6Yp1ys2z7Bz-1',
+      desc:'Simulazione fluida in Houdini con render Octane.' },
+    { title:'CYBORG_ANATOMY', tag:'MODELLAZIONE 3D', sub:'ZBRUSH', wide:false,
+      img:'https://lh3.googleusercontent.com/aida-public/AB6AXuAhyvXVSRX9UhxnXyw9eCvcUhHsBbeDNig-EgO-CLGBSjGdgapzLDPMjXSp2LuzvIjdDg9XqQHDnjH6Nu-gK-m1b7DjpqbFQXSApf_wM28B93EW4IQjDNeYI_CMdkljT0jEL0-C1Lm0p61QrFvzYnY_gdAfTQeH1y2C7666zoqEamB6L4MQuc2fBmisUWEa8IY-p70G5SnGpz5CFa-jbUGMJclsx1E7-xEFkbQ7klDWWsaXhcH_PNABmB-W3kKDa4ckXNR5g',
+      desc:'Sculpt anatomico di un cyborg ad altissimo dettaglio.' }
+  ];
+
+  function shuffle(arr){ return arr.sort(()=>Math.random()-0.5); }
+
+  function buildCard(p){
+    const span = p.wide ? 'md:col-span-2' : '';
+    const aspect = p.wide ? 'aspect-video' : 'aspect-square';
+    return `<div class="group relative ${span} ${aspect} overflow-hidden rounded-xl bg-surface-container-lowest cursor-pointer" onclick="location.href='archivio.html'">
+      <img alt="${p.title}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" src="${p.img}"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#0c0e17] via-transparent to-transparent opacity-90"></div>
+      <div class="absolute bottom-0 left-0 p-6 w-full transform transition-transform duration-500 group-hover:-translate-y-2">
+        <div class="flex gap-2 mb-3">
+          <span class="px-3 py-1 bg-primary-container/20 text-primary-container text-[10px] font-['Manrope'] font-bold uppercase tracking-wider rounded-full border border-primary-container/30">${p.tag}</span>
+          <span class="px-3 py-1 bg-surface-container-highest/60 text-on-surface-variant text-[10px] font-['Manrope'] font-bold rounded-full">${p.sub}</span>
+        </div>
+        <h3 class="font-['Space_Grotesk'] text-${p.wide?'3xl':'xl'} font-bold text-[#e1e1ef] mb-1">${p.title}</h3>
+        <p class="text-[#b9cacb] text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500">${p.desc}</p>
+      </div>
+    </div>`;
+  }
+
+  const pool = shuffle([...ALL_PROJECTS]);
+  // Pick 4: favour one wide + three small
+  let selected = [];
+  const wides = pool.filter(p=>p.wide);
+  const smalls = pool.filter(p=>!p.wide);
+  if(wides.length) selected.push(wides[0]);
+  selected = selected.concat(smalls.slice(0,3));
+  if(selected.length<4) selected = selected.concat(wides.slice(1,4-selected.length));
+
+  document.getElementById('random-projects').innerHTML = selected.map(buildCard).join('');
+})();
+</script>
+<!-- Operational Protocol / Approach -->
+<section class="py-24 bg-surface-container-low">
+<div class="px-8 md:px-20 max-w-[1920px] mx-auto">
+<div class="mb-16">
+<span class="font-label text-primary-container text-xs tracking-[0.4em] uppercase font-bold block mb-4">OPERATIONAL PROTOCOL</span>
+<h2 class="font-display text-4xl font-bold text-on-surface uppercase leading-none">Il Mio Approccio al <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-container to-accent-pink">Design Operativo</span></h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="p-8 bg-surface-container-high rounded-sm border-l-4 border-primary-container transition-all hover:bg-surface-bright group">
+<div class="mb-8 flex justify-between items-start">
+<span class="material-symbols-outlined text-primary-container text-4xl group-hover:scale-110 transition-transform">architecture</span>
+<span class="font-display text-on-surface-variant/20 text-4xl font-bold">01</span>
+</div>
+<h4 class="font-headline text-xl font-bold text-on-surface mb-4 uppercase">Fondamenta Tecniche</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Ogni pixel deve servire una funzione. Priorità assoluta all'ottimizzazione della topologia e alla pulizia delle UV per performance ottimali.</p>
+</div>
+<div class="p-8 bg-surface-container-high rounded-sm border-l-4 border-accent-pink transition-all hover:bg-surface-bright group">
+<div class="mb-8 flex justify-between items-start">
+<span class="material-symbols-outlined text-accent-pink text-4xl group-hover:scale-110 transition-transform">brush</span>
+<span class="font-display text-on-surface-variant/20 text-4xl font-bold">02</span>
+</div>
+<h4 class="font-headline text-xl font-bold text-on-surface mb-4 uppercase">Narrativa Visiva</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">L'asset racconta una storia. Attraverso lo shading e il texturing PBR, infondo vita e passato in ogni oggetto digitale.</p>
+</div>
+<div class="p-8 bg-surface-container-high rounded-sm border-l-4 border-primary-container transition-all hover:bg-surface-bright group">
+<div class="mb-8 flex justify-between items-start">
+<span class="material-symbols-outlined text-primary-container text-4xl group-hover:scale-110 transition-transform">joystick</span>
+<span class="font-display text-on-surface-variant/20 text-4xl font-bold">03</span>
+</div>
+<h4 class="font-headline text-xl font-bold text-on-surface mb-4 uppercase">Gameplay First</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Il design estetico non deve mai ostacolare la leggibilità del gioco. Estetica e giocabilità in perfetta simbiosi.</p>
+</div>
+<div class="p-8 bg-surface-container-high rounded-sm border-l-4 border-accent-pink transition-all hover:bg-surface-bright group">
+<div class="mb-8 flex justify-between items-start">
+<span class="material-symbols-outlined text-accent-pink text-4xl group-hover:scale-110 transition-transform">sync</span>
+<span class="font-display text-on-surface-variant/20 text-4xl font-bold">04</span>
+</div>
+<h4 class="font-headline text-xl font-bold text-on-surface mb-4 uppercase">Iterazione Rapida</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Cicli costanti di feedback e testing direttamente in-engine per garantire che l'idea iniziale evolva nel miglior gameplay possibile.</p>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+<!-- Footer -->
+<footer class="bg-[#0c0e17] w-full py-12 px-8 mt-20 border-t border-[#3b494b]/10">
+<div class="flex flex-col gap-6 max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="text-[#00f0ff] font-bold text-xl font-display tracking-tighter">
+                ZAKER <span class="text-on-surface-variant/40 font-light font-body">| GAME_DEV</span>
+</div>
+<p class="text-[#b9cacb] font-['Manrope'] text-[0.6875rem] uppercase tracking-[0.2em] font-light">
+                ©2026 GASPARE CIPOLLETTA A.K.A ZAKER. ALL RIGHTS RESERVED.
+            </p>
+</div>
+<div class="flex justify-center gap-8 text-[#b9cacb] font-['Manrope'] text-[0.6875rem] uppercase tracking-[0.2em] font-light border-t border-[#3b494b]/10 pt-6">
+<a class="hover:text-[#00f0ff] transition-colors duration-500" href="#">INSTAGRAM</a>
+<a class="hover:text-[#00f0ff] transition-colors duration-500" href="#">ARTSTATION</a>
+<a class="hover:text-[#00f0ff] transition-colors duration-500" href="#">LINKEDIN</a>
+<a class="hover:text-[#00f0ff] transition-colors duration-500" href="#">GITHUB</a>
+</div>
+</div>
+</footer>
+<!-- Custom Cursor -->
+<style>
+  *, *::before, *::after { cursor: none !important; }
+  #zk-cursor {
+    position: fixed;
+    top: 0; left: 0;
+    width: 32px; height: 32px;
+    pointer-events: none;
+    z-index: 2147483647;
+    will-change: transform;
+    transition: opacity 0.2s;
+  }
+  #zk-cursor svg {
+    filter:
+      drop-shadow(0 0 3px #00f0ff)
+      drop-shadow(0 0 8px rgba(0,240,255,0.55))
+      drop-shadow(0 0 18px rgba(0,240,255,0.25));
+    transition: filter 0.15s ease;
+  }
+  #zk-cursor.zk-click svg {
+    filter:
+      drop-shadow(0 0 4px #f92a82)
+      drop-shadow(0 0 10px rgba(249,42,130,0.65))
+      drop-shadow(0 0 20px rgba(249,42,130,0.3));
+    transform: scale(0.88);
+  }
+  #zk-cursor.zk-hover svg {
+    filter:
+      drop-shadow(0 0 5px #00f0ff)
+      drop-shadow(0 0 14px rgba(0,240,255,0.7))
+      drop-shadow(0 0 26px rgba(0,240,255,0.35));
+    transform: scale(1.15);
+  }
+</style>
+<div id="zk-cursor" aria-hidden="true">
+  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Full base (cyan) -->
+    <path d="M 16 3 L 5 28 L 16 22 L 27 28 Z" fill="#00f0ff"/>
+    <!-- Right half overlay (pink) -->
+    <path d="M 16 3 L 16 22 L 27 28 Z" fill="#f92a82"/>
+    <!-- Tip highlight -->
+    <circle cx="16" cy="3" r="1.5" fill="#ffffff" opacity="0.9"/>
+  </svg>
+</div>
+<script>
+(function(){
+  var cur = document.getElementById('zk-cursor');
+  if (!cur) return;
+
+  /* Direct position — no lag */
+  window.addEventListener('mousemove', function(e){
+    cur.style.transform = 'translate(' + (e.clientX - 16) + 'px,' + (e.clientY - 3) + 'px)';
+  }, { passive: true });
+
+  /* Click flash */
+  window.addEventListener('mousedown', function(){ cur.classList.add('zk-click'); });
+  window.addEventListener('mouseup',   function(){ cur.classList.remove('zk-click'); });
+
+  /* Interactive element hover */
+  var interactors = 'a, button, input, [role="button"], label';
+  document.querySelectorAll(interactors).forEach(function(el){
+    el.addEventListener('mouseenter', function(){ cur.classList.add('zk-hover'); });
+    el.addEventListener('mouseleave', function(){ cur.classList.remove('zk-hover'); });
+  });
+
+  /* Hide when window loses focus */
+  document.addEventListener('mouseleave',  function(){ cur.style.opacity = '0'; });
+  document.addEventListener('mouseenter',  function(){ cur.style.opacity = '1'; });
+})();
+</script>
+</body></html>
+
