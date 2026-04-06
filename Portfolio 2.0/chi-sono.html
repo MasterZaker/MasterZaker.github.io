@@ -8,153 +8,79 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=Manrope:wght@400;500;700;800&amp;family=Orbitron:wght@400;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "surface-variant": "#32343e",
-              "surface-tint": "#00dbe9",
-              "on-primary-container": "#006970",
-              "on-tertiary": "#3b2f00",
-              "on-primary": "#00363a",
-              "on-background": "#e1e1ef",
-              "tertiary-fixed": "#ffe179",
-              "tertiary": "#fff5de",
-              "primary-container": "#00f0ff",
-              "on-error": "#690005",
-              "surface-container-lowest": "#0c0e17",
-              "surface-container-high": "#282933",
-              "surface": "#11131c",
-              "on-surface": "#e1e1ef",
-              "secondary-container": "#7000ff",
-              "on-error-container": "#ffdad6",
-              "surface-bright": "#373943",
-              "on-tertiary-fixed": "#231b00",
-              "inverse-surface": "#e1e1ef",
-              "surface-dim": "#11131c",
-              "surface-container-low": "#191b24",
-              "primary-fixed-dim": "#00dbe9",
-              "on-secondary-container": "#ddcdff",
-              "primary": "#dbfcff",
-              "inverse-on-surface": "#2e303a",
-              "inverse-primary": "#006970",
-              "surface-container-highest": "#32343e",
-              "on-primary-fixed-variant": "#004f54",
-              "on-secondary-fixed-variant": "#5700c9",
-              "error-container": "#93000a",
-              "surface-container": "#1d1f29",
-              "on-tertiary-fixed-variant": "#554500",
-              "outline": "#849495",
-              "on-tertiary-container": "#715d00",
-              "primary-fixed": "#7df4ff",
-              "error": "#ffb4ab",
-              "secondary": "#d1bcff",
-              "on-surface-variant": "#b9cacb",
-              "on-primary-fixed": "#002022",
-              "on-secondary": "#3c0090",
-              "secondary-fixed": "#e9ddff",
-              "tertiary-fixed-dim": "#eac324",
-              "on-secondary-fixed": "#23005b",
-              "background": "#11131c",
-              "tertiary-container": "#fed639",
-              "secondary-fixed-dim": "#d1bcff",
-              "outline-variant": "#3b494b",
-              "accent-pink": "#f92a82"
-            },
-            fontFamily: {
-              "headline": ["Space Grotesk"],
-              "body": ["Inter"],
-              "label": ["Manrope"],
-              "display": ["Orbitron"],
-              "orbitron": ["Orbitron"]
-            },
-            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
-          },
-        },
-      }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            vertical-align: middle;
-        }
-        .cyber-border {
-            position: relative;
-        }
-        .cyber-border::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, #00f0ff, #f92a82, transparent);
-            opacity: 0.5;
-        }
-        .neon-glow-cyan {
-            box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
-        }
-        .neon-glow-magenta {
-            box-shadow: 0 0 15px rgba(249, 42, 130, 0.3);
-        }
-        .glass-panel {
-            background: rgba(17, 19, 28, 0.6);
-            backdrop-filter: blur(20px);
-        }
-        #mobile-menu { display: none; }
-        #mobile-menu.open { display: flex; }
-    </style>
+<script src="tailwind-setup.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="lang.js"></script>
+    <script src="main.js"></script>
 </head>
-<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
-<!-- TopNavBar -->
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+
+<!-- ========================================== -->
+<!-- NAVBAR SUPERIORE E MENU MOBILE             -->
+<!-- ========================================== -->
 <header class="fixed top-0 w-full z-50 bg-[#11131c]/60 backdrop-blur-xl border-b border-[#3b494b]/20 shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
 <div class="relative flex items-center px-8 h-20 w-full max-w-[1920px] mx-auto">
 <a href="index.html" class="text-2xl font-black tracking-tighter text-[#00f0ff] drop-shadow-[0_0_8px_rgba(0,240,255,0.5)] font-display">
                 ZAKER
             </a>
 <nav class="hidden md:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
-<a class="text-[#e1e1ef]/60 hover:text-[#e1e1ef] transition-colors font-['Space_Grotesk'] uppercase tracking-widest text-sm" href="index.html">HOME</a>
-<a class="text-[#e1e1ef]/60 hover:text-[#e1e1ef] transition-colors font-['Space_Grotesk'] uppercase tracking-widest text-sm" href="archivio.html">ARCHIVIO</a>
-<a class="text-[#00f0ff] border-b-2 border-[#00f0ff] pb-1 font-['Space_Grotesk'] uppercase tracking-widest text-sm" href="chi-sono.html">CHI SONO</a>
+<a class="text-[#e1e1ef]/60 hover:text-[#e1e1ef] transition-colors font-['Space_Grotesk'] uppercase tracking-widest text-sm" href="index.html"><span class="lang-it">HOME</span><span class="lang-en">HOME</span></a>
+<a class="text-[#e1e1ef]/60 hover:text-[#e1e1ef] transition-colors font-['Space_Grotesk'] uppercase tracking-widest text-sm" href="archivio.html"><span class="lang-it">PROGETTI</span><span class="lang-en">PROJECTS</span></a>
+<a class="text-[#00f0ff] border-b-2 border-[#00f0ff] pb-1 font-['Space_Grotesk'] uppercase tracking-widest text-sm" href="chi-sono.html"><span class="lang-it">CHI SONO</span><span class="lang-en">ABOUT ME</span></a>
 </nav>
 <div class="ml-auto flex items-center gap-4">
+<button onclick="toggleLang()" class="text-on-surface-variant hover:text-primary-container font-display font-medium text-sm tracking-widest transition-colors hidden md:block">
+    <span class="material-symbols-outlined text-lg align-middle mr-1">translate</span><span class="lang-switcher-text">EN</span>
+</button>
 <a href="chi-sono.html" class="hidden md:block bg-primary text-on-primary font-headline font-bold px-6 py-2 text-sm tracking-widest rounded-sm hover:bg-surface-tint transition-all active:scale-95 duration-200">HIRE_ME</a>
-<button onclick="document.getElementById('mobile-menu').classList.toggle('open')" class="md:hidden text-on-surface-variant cursor-pointer">
+<button onclick="document.getElementById('mobile-menu').classList.toggle('open')" class="md:hidden text-on-surface-variant">
     <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
 </div>
 <!-- Mobile Menu -->
 <div id="mobile-menu" class="flex-col gap-4 px-8 pb-6 bg-[#11131c]/95 border-t border-[#3b494b]/20">
-    <a href="index.html" class="text-[#e1e1ef]/70 font-['Space_Grotesk'] uppercase tracking-widest text-sm py-2">HOME</a>
-    <a href="archivio.html" class="text-[#e1e1ef]/70 font-['Space_Grotesk'] uppercase tracking-widest text-sm py-2">ARCHIVIO</a>
-    <a href="chi-sono.html" class="text-[#00f0ff] font-['Space_Grotesk'] uppercase tracking-widest text-sm py-2">CHI SONO</a>
+    <a href="index.html" class="text-[#e1e1ef]/70 font-['Space_Grotesk'] uppercase tracking-widest text-sm py-2"><span class="lang-it">HOME</span><span class="lang-en">HOME</span></a>
+    <a href="archivio.html" class="text-[#e1e1ef]/70 font-['Space_Grotesk'] uppercase tracking-widest text-sm py-2"><span class="lang-it">PROGETTI</span><span class="lang-en">PROJECTS</span></a>
+    <a href="chi-sono.html" class="text-[#00f0ff] font-['Space_Grotesk'] uppercase tracking-widest text-sm py-2"><span class="lang-it">CHI SONO</span><span class="lang-en">ABOUT ME</span></a>
+    <button onclick="toggleLang()" class="text-left text-on-surface-variant hover:text-primary-container font-['Space_Grotesk'] uppercase tracking-widest text-sm py-2 mt-2 border-t border-[#3b494b]/20">
+        <span class="material-symbols-outlined text-sm align-middle mr-1">translate</span>
+        <span class="lang-it">CAMBIA IN INGLESE</span><span class="lang-en">SWITCH TO ITALIAN</span>
+    </button>
 </div>
 </header>
+
+<!-- ========================================== -->
+<!-- CONTENUTO PRINCIPALE DELLA PAGINA          -->
+<!-- ========================================== -->
 <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto space-y-40">
-<!-- Section 1: Hero / Presentazione -->
+
+<!-- ========================================== -->
+<!-- SEZIONE EROE: PRESENTAZIONE PROFILO        -->
+<!-- ========================================== -->
 <section class="flex flex-col lg:flex-row items-center gap-16">
 <div class="flex-1 space-y-8 text-left">
 <div class="space-y-2">
-<span class="font-label text-xs tracking-[0.2em] text-[#f92a82] uppercase">Game Designer</span>
+<span class="font-label text-xs tracking-[0.2em] text-[#f92a82] uppercase"><span class="lang-it">Game Designer</span><span class="lang-en">Game Designer</span></span>
 <h1 class="font-display text-5xl md:text-7xl font-bold leading-none tracking-tighter">
                         GASPARE <br/>
 <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00f0ff] to-[#f92a82]">CIPOLLETTA</span>
 </h1>
 </div>
 <p class="text-lg text-on-surface-variant max-w-xl leading-relaxed font-light">
-                    Scolpisco mondi digitali dove la fisica incontra l'immaginazione. Game Designer di giorno, Modellatore 3D di notte, costruisco esperienze immersive che sfidano i confini della percezione spaziale e della narrazione interattiva.
-                </p>
+    <span class="lang-it">Sviluppatore e 3D Generalist multidisciplinare, capace di seguire l'intero ciclo di vita di un progetto, dall'ideazione narrativa alla modellazione, fino alla programmazione e al level design in Unity. Unisco logica e creatività per trasformare idee complesse in esperienze interattive complete e strutturate.</span>
+    <span class="lang-en">Multidisciplinary Developer and 3D Generalist, capable of following the entire lifecycle of a project, from narrative ideation to modeling, up to programming and level design in Unity. I blend logic and creativity to turn complex ideas into complete, structured interactive experiences.</span>
+</p>
+<!-- Pulsanti nascosti temporaneamente come richiesto:
 <div class="flex gap-4">
 <button class="bg-[#dbfcff] text-[#00363a] px-8 py-3 font-label font-bold text-xs uppercase tracking-widest rounded-sm hover:shadow-[0_0_20px_rgba(0,219,233,0.4)] transition-all">
-                        Scarica CV
-                    </button>
+    <span class="lang-it">Scarica CV</span><span class="lang-en">Download CV</span>
+</button>
 <a href="archivio.html" class="border border-outline/40 text-on-surface px-8 py-3 font-label font-bold text-xs uppercase tracking-widest rounded-sm hover:bg-surface-container-high transition-all">
-                        Progetti
-                    </a>
+    <span class="lang-it">Progetti</span><span class="lang-en">Projects</span>
+</a>
 </div>
+-->
 </div>
 <div class="relative group">
 <div class="absolute -inset-4 bg-gradient-to-tr from-[#00f0ff] to-[#f92a82] opacity-20 blur-2xl group-hover:opacity-40 transition-opacity"></div>
@@ -169,38 +95,50 @@
 </div>
 </div>
 </section>
-<!-- Section 2: Hobby e Passioni (Bento Style) -->
+
+<!-- ========================================== -->
+<!-- SEZIONE PASSIONI (BENTO GRID)              -->
+<!-- ========================================== -->
 <section class="space-y-12">
 <div class="space-y-2 border-l-4 border-[#f92a82] pl-6">
-<h2 class="font-display text-3xl font-bold tracking-tight uppercase">Core Drives</h2>
-<p class="font-label text-sm text-on-surface-variant uppercase tracking-widest">Cosa alimenta il mio motore creativo</p>
+<h2 class="font-display text-3xl font-bold tracking-tight uppercase"><span class="lang-it">Core Drives</span><span class="lang-en">Core Drives</span></h2>
+<p class="font-label text-sm text-on-surface-variant uppercase tracking-widest"><span class="lang-it">Cosa alimenta il mio motore creativo</span><span class="lang-en">What fuels my creative engine</span></p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-<!-- Gaming -->
+<!-- Gaming -> Unity -->
 <div class="md:col-span-2 bg-surface-container-low p-8 rounded-xl border border-outline-variant/10 hover:border-[#00f0ff]/40 transition-all group relative overflow-hidden">
 <div class="absolute -right-10 -bottom-10 opacity-5 group-hover:opacity-10 transition-opacity">
 <span class="material-symbols-outlined text-[12rem]">sports_esports</span>
 </div>
 <div class="relative z-10 space-y-4">
 <span class="material-symbols-outlined text-[#00f0ff] text-4xl">sports_esports</span>
-<h3 class="font-headline text-2xl font-bold">Gaming</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">Non solo intrattenimento, ma analisi continua di meccaniche, loop di gameplay e architettura dei livelli.</p>
+<h3 class="font-headline text-2xl font-bold"><span class="lang-it">Sviluppo Unity &amp; Web</span><span class="lang-en">Unity &amp; Web Dev</span></h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+    <span class="lang-it">Level Design e World-building in Unity 3D, supportato da programmazione in C# e sviluppo web front-end (HTML/CSS).</span>
+    <span class="lang-en">Level Design and World-building in Unity 3D, supported by C# programming and front-end web development (HTML/CSS).</span>
+</p>
 </div>
 </div>
 <!-- Arte 3D -->
 <div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/10 hover:border-[#f92a82]/40 transition-all group">
 <div class="space-y-4">
 <span class="material-symbols-outlined text-[#f92a82] text-4xl">3d_rotation</span>
-<h3 class="font-headline text-2xl font-bold">Arte 3D</h3>
-<p class="text-sm text-on-surface-variant">La manipolazione della geometria per creare mondi tangibili.</p>
+<h3 class="font-headline text-2xl font-bold"><span class="lang-it">3D Art & Animazione</span><span class="lang-en">3D Art & Animation</span></h3>
+<p class="text-sm text-on-surface-variant">
+    <span class="lang-it">Modellazione Hard Surface e organica su Blender, UV Mapping, creazione materiali, texturing e animazione 3D.</span>
+    <span class="lang-en">Hard Surface and organic modeling in Blender, UV Mapping, material creation, texturing and 3D animation.</span>
+</p>
 </div>
 </div>
-<!-- Storytelling -->
+<!-- Storytelling -> Game Design -->
 <div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/10 hover:border-[#00f0ff]/40 transition-all group">
 <div class="space-y-4">
 <span class="material-symbols-outlined text-[#00f0ff] text-4xl">auto_stories</span>
-<h3 class="font-headline text-2xl font-bold">Story</h3>
-<p class="text-sm text-on-surface-variant">Narrazione ambientale e world-building strutturato.</p>
+<h3 class="font-headline text-2xl font-bold"><span class="lang-it">Game Design & Narrativa</span><span class="lang-en">Game Design & Narrative</span></h3>
+<p class="text-sm text-on-surface-variant">
+    <span class="lang-it">Stesura di GDD completi, scrittura narrativa, progettazione di meccaniche, core loop e bilanciamento di gioco.</span>
+    <span class="lang-en">Complete GDD drafting, narrative writing, mechanics design, core loops and game balancing.</span>
+</p>
 </div>
 </div>
 <!-- Tecnologia -->
@@ -209,15 +147,67 @@
 <span class="material-symbols-outlined text-4xl text-[#f92a82]">memory</span>
 </div>
 <div class="flex-1 space-y-2 text-center md:text-left">
-<h3 class="font-headline text-2xl font-bold uppercase tracking-tight">Tecnologia &amp; Innovazione</h3>
-<p class="text-on-surface-variant max-w-2xl">Sempre alla ricerca dell'ultimo plugin, dell'integrazione AI o della nuova release engine che sposti l'asticella del possibile.</p>
+<h3 class="font-headline text-2xl font-bold uppercase tracking-tight"><span class="lang-it">Tecnologia &amp; Innovazione</span><span class="lang-en">Tech &amp; Innovation</span></h3>
+<p class="text-on-surface-variant max-w-2xl">
+    <span class="lang-it">Sempre alla ricerca dell'ultimo plugin, dell'integrazione AI o della nuova release engine che sposti l'asticella del possibile.</span>
+    <span class="lang-en">Always searching for the latest plugin, AI integration, or new engine release that pushes the bar of what's possible.</span>
+</p>
 </div>
 </div>
 </div>
 </section>
-<!-- Section 3 & 4: Skills Split -->
+
+<!-- ========================================== -->
+<!-- SEZIONE METODOLOGIA (TESTI LUNGHI)         -->
+<!-- ========================================== -->
+<section class="space-y-12">
+<div class="space-y-2 border-l-4 border-[#00f0ff] pl-6">
+<h2 class="font-display text-3xl font-bold tracking-tight uppercase"><span class="lang-it">Metodo & Processo Creativo</span><span class="lang-en">Method & Creative Process</span></h2>
+<p class="font-label text-sm text-on-surface-variant uppercase tracking-widest"><span class="lang-it">In profondità</span><span class="lang-en">In depth</span></p>
+</div>
+<div class="space-y-8">
+    <!-- Box 1 -->
+    <div class="bg-surface-container-lowest p-8 md:p-12 border border-outline-variant/10 rounded-xl hover:border-[#f92a82]/40 transition-all flex flex-col md:flex-row gap-8 items-start">
+        <span class="material-symbols-outlined text-[#f92a82] text-5xl">3d_rotation</span>
+        <div class="space-y-4">
+            <h3 class="font-headline text-2xl font-bold uppercase"><span class="lang-it">Modellazione 3D e Animazione</span><span class="lang-en">3D Modeling & Animation</span></h3>
+            <p class="text-on-surface-variant leading-relaxed">
+                <span class="lang-it">Curo l'intero processo visivo, trasformando concept in asset pronti per il motore di gioco. Lavoro principalmente su Blender, dove sono specializzato nella modellazione Hard Surface con solide basi di modellazione organica. Mi occupo di ogni fase della pipeline grafica: dall'ottimizzazione dell'UV mapping alla creazione di materiali e texture dettagliate, fino all'animazione 3D per dare vita a personaggi e prop.</span>
+                <span class="lang-en">I manage the entire visual process, transforming concepts into game-ready assets. I work mainly on Blender, where I specialize in Hard Surface modeling with solid foundations in organic modeling. I handle every phase of the graphics pipeline: from UV mapping optimization to the creation of detailed materials and textures, down to 3D animation to bring characters and props to life.</span>
+            </p>
+        </div>
+    </div>
+    <!-- Box 2 -->
+    <div class="bg-surface-container-lowest p-8 md:p-12 border border-outline-variant/10 rounded-xl hover:border-[#00f0ff]/40 transition-all flex flex-col md:flex-row gap-8 items-start">
+        <span class="material-symbols-outlined text-[#00f0ff] text-5xl">sports_esports</span>
+        <div class="space-y-4">
+            <h3 class="font-headline text-2xl font-bold uppercase"><span class="lang-it">Sviluppo Unity e Level Design</span><span class="lang-en">Unity Development & Level Design</span></h3>
+            <p class="text-on-surface-variant leading-relaxed">
+                <span class="lang-it">Il mio ambiente naturale per dare vita ai mondi è Unity 3D. Ho una forte competenza nel Level Design e nel World-building, curando l'estetica e la navigabilità degli ambienti. Supporto la mia visione artistica con solide basi tecniche, programmando in C# per gestire logiche di gioco fluide. Inoltre, la mia conoscenza di HTML e CSS mi permette di avere una marcia in più nella gestione di interfacce e progetti web correlati.</span>
+                <span class="lang-en">My natural environment to bring worlds to life is Unity 3D. I have strong expertise in Level Design and World-building, taking care of the aesthetics and navigability of environments. I support my artistic vision with solid technical foundations, programming in C# to manage fluid game logics. Furthermore, my HTML/CSS knowledge gives me an edge in managing interfaces and related web projects.</span>
+            </p>
+        </div>
+    </div>
+    <!-- Box 3 -->
+    <div class="bg-surface-container-lowest p-8 md:p-12 border border-outline-variant/10 rounded-xl hover:border-[#f92a82]/40 transition-all flex flex-col md:flex-row gap-8 items-start">
+        <span class="material-symbols-outlined text-[#f92a82] text-5xl">auto_stories</span>
+        <div class="space-y-4">
+            <h3 class="font-headline text-2xl font-bold uppercase"><span class="lang-it">Game Design e Direzione Narrativa</span><span class="lang-en">Game Design & Narrative Direction</span></h3>
+            <p class="text-on-surface-variant leading-relaxed">
+                <span class="lang-it">Credo che ogni grande gioco nasca da fondamenta solide. Oltre allo sviluppo tecnico, mi occupo di ideazione, analisi narrativa e scrittura creativa. Strutturo e redigo Game Design Document (GDD) completi in ogni dettaglio: dalla definizione profonda di storia e lore, alla progettazione rigorosa di meccaniche, dinamiche e core loop, fino al bilanciamento dei sistemi di gioco, gestione nemici ed economia degli oggetti.</span>
+                <span class="lang-en">I believe every great game is born from solid foundations. In addition to technical development, I deal with ideation, narrative analysis, and creative writing. I structure and draft detailed Game Design Documents (GDD): from deep story and lore to rigorous design of mechanics, dynamics, and core loops, up to balancing game systems, enemy management, and item economy.</span>
+            </p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- ========================================== -->
+<!-- SEZIONE SKILLS MISTE (DUE COLONNE)         -->
+<!-- ========================================== -->
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-24">
-<!-- Hard Skills -->
+
+<!-- Colonne 1: Hard Skills -->
 <section class="space-y-12">
 <div class="space-y-2 border-l-4 border-[#00f0ff] pl-6">
 <h2 class="font-display text-3xl font-bold tracking-tight uppercase">Technical Specs</h2>
@@ -262,7 +252,8 @@
 </div>
 </div>
 </section>
-<!-- Soft Skills -->
+
+<!-- Colonne 2: Soft Skills -->
 <section class="space-y-12">
 <div class="space-y-2 border-l-4 border-[#f92a82] pl-6">
 <h2 class="font-display text-3xl font-bold tracking-tight uppercase">Operational Protocol</h2>
@@ -302,7 +293,10 @@
 </section>
 </div>
 </main>
-<!-- Pronto per il Next Level -->
+
+<!-- ========================================== -->
+<!-- SEZIONE CONTATTI E FINE PIE DI PAGINA      -->
+<!-- ========================================== -->
 <section class="py-24 px-8 md:px-20 max-w-[1920px] mx-auto">
 <div class="bg-surface-container-lowest rounded-2xl p-12 border border-outline-variant/20 relative overflow-hidden flex flex-col md:flex-row items-center gap-12">
 <div class="absolute top-0 right-0 w-64 h-64 bg-primary-container/5 blur-[120px] rounded-full"></div>
@@ -319,14 +313,19 @@
 </div>
 </div>
 </section>
-<!-- Footer -->
-<footer class="bg-[#0c0e17] w-full py-12 px-8">
+
+<!-- ========================================== -->
+<!-- FOOTER                                     -->
+<!-- ========================================== -->
+<footer class="bg-[#0c0e17] w-full py-12 px-8 mt-20 border-t border-[#3b494b]/10">
 <div class="flex flex-col gap-6 max-w-7xl mx-auto">
 <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-<div class="text-[#00f0ff] font-bold text-xl font-display tracking-tighter">ZAKER <span class="text-on-surface-variant/40 font-light font-body">| GAME_DEV</span></div>
-<div class="font-['Manrope'] text-[0.75rem] tracking-[0.1em] uppercase text-[#b9cacb]">
-                ©2026 GASPARE CIPOLLETTA A.K.A ZAKER. ALL RIGHTS RESERVED.
-            </div>
+<div class="text-[#00f0ff] font-bold text-xl font-display tracking-tighter">
+                ZAKER <span class="text-on-surface-variant/40 font-light font-body">| GAME_DEV</span>
+</div>
+<p class="text-[#b9cacb] font-['Manrope'] text-[0.6875rem] uppercase tracking-[0.2em] font-light">
+                ©2026 GASPARE CIPOLLETTA A.K.A ZAKER. <span class="lang-it">TUTTI I DIRITTI RISERVATI.</span><span class="lang-en">ALL RIGHTS RESERVED.</span>
+            </p>
 </div>
 <div class="flex justify-center gap-8 font-['Manrope'] text-[0.75rem] tracking-[0.1em] uppercase text-[#b9cacb] border-t border-[#3b494b]/10 pt-6">
 <a class="hover:text-[#dbfcff] transition-all opacity-80 hover:opacity-100" href="#">INSTAGRAM</a>
@@ -335,65 +334,11 @@
 <a class="hover:text-[#dbfcff] transition-all opacity-80 hover:opacity-100" href="#">GITHUB</a>
 </div>
 </div>
-</footer>
-<!-- Custom Cursor -->
-<style>
-  *, *::before, *::after { cursor: none !important; }
-  #zk-cursor {
-    position: fixed;
-    top: 0; left: 0;
-    width: 32px; height: 32px;
-    pointer-events: none;
-    z-index: 2147483647;
-    will-change: transform;
-    transition: opacity 0.2s;
-  }
-  #zk-cursor svg {
-    filter:
-      drop-shadow(0 0 3px #00f0ff)
-      drop-shadow(0 0 8px rgba(0,240,255,0.55))
-      drop-shadow(0 0 18px rgba(0,240,255,0.25));
-    transition: filter 0.15s ease;
-  }
-  #zk-cursor.zk-click svg {
-    filter:
-      drop-shadow(0 0 4px #f92a82)
-      drop-shadow(0 0 10px rgba(249,42,130,0.65))
-      drop-shadow(0 0 20px rgba(249,42,130,0.3));
-    transform: scale(0.88);
-  }
-  #zk-cursor.zk-hover svg {
-    filter:
-      drop-shadow(0 0 5px #00f0ff)
-      drop-shadow(0 0 14px rgba(0,240,255,0.7))
-      drop-shadow(0 0 26px rgba(0,240,255,0.35));
-    transform: scale(1.15);
-  }
-</style>
-<div id="zk-cursor" aria-hidden="true">
-  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M 16 3 L 5 28 L 16 22 L 27 28 Z" fill="#00f0ff"/>
-    <path d="M 16 3 L 16 22 L 27 28 Z" fill="#f92a82"/>
-    <circle cx="16" cy="3" r="1.5" fill="#ffffff" opacity="0.9"/>
-  </svg>
 </div>
-<script>
-(function(){
-  var cur = document.getElementById('zk-cursor');
-  if (!cur) return;
-  window.addEventListener('mousemove', function(e){
-    cur.style.transform = 'translate(' + (e.clientX - 16) + 'px,' + (e.clientY - 3) + 'px)';
-  }, { passive: true });
-  window.addEventListener('mousedown', function(){ cur.classList.add('zk-click'); });
-  window.addEventListener('mouseup',   function(){ cur.classList.remove('zk-click'); });
-  var interactors = 'a, button, input, [role="button"], label';
-  document.querySelectorAll(interactors).forEach(function(el){
-    el.addEventListener('mouseenter', function(){ cur.classList.add('zk-hover'); });
-    el.addEventListener('mouseleave', function(){ cur.classList.remove('zk-hover'); });
-  });
-  document.addEventListener('mouseleave',  function(){ cur.style.opacity = '0'; });
-  document.addEventListener('mouseenter',  function(){ cur.style.opacity = '1'; });
-})();
-</script>
+</footer>
+
+<!-- ========================================== -->
+<!-- SCRIPT DEL CURSORE PERSONALIZZATO          -->
+<!-- ========================================== -->
 </body></html>
 

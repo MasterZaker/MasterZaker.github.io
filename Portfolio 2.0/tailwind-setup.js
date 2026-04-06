@@ -1,0 +1,70 @@
+// ==========================================
+// CONFIGURAZIONE GLOBALE TAILWIND CSS
+// Incorporato tramite CDN in tutti i file HTML
+// ==========================================
+
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                "secondary-fixed-dim": "#d1bcff",
+                "primary-fixed-dim": "#00dbe9",
+                "on-tertiary": "#3b2f00",
+                "error-container": "#93000a",
+                "on-tertiary-fixed": "#231b00",
+                "tertiary-fixed": "#ffe179",
+                "on-surface-variant": "#b9cacb",
+                "outline": "#849495",
+                "on-surface": "#e1e1ef",
+                "on-error": "#690005",
+                "surface-container-high": "#282933",
+                "surface-bright": "#373943",
+                "on-secondary-fixed-variant": "#5700c9",
+                "on-primary-fixed-variant": "#004f54",
+                "surface-variant": "#32343e",
+                "secondary-fixed": "#e9ddff",
+                "tertiary": "#fff5de",
+                "on-primary-fixed": "#002022",
+                "secondary": "#d1bcff",
+                "secondary-container": "#7000ff",
+                "surface-container": "#1d1f29",
+                "tertiary-fixed-dim": "#eac324",
+                "surface-container-highest": "#32343e",
+                "on-tertiary-container": "#715d00",
+                "on-primary": "#00363a",
+                "surface-dim": "#11131c",
+                "primary-container": "#00f0ff",
+                "inverse-primary": "#006970",
+                "on-secondary": "#3c0090",
+                "on-secondary-container": "#ddcdff",
+                "on-tertiary-fixed-variant": "#554500",
+                "on-background": "#e1e1ef",
+                "outline-variant": "#3b494b",
+                "inverse-on-surface": "#2e303a",
+                "surface": "#11131c",
+                "on-primary-container": "#006970",
+                "surface-container-low": "#191b24",
+                "error": "#ffb4ab",
+                "inverse-surface": "#e1e1ef",
+                "background": "#11131c",
+                "surface-tint": "#00dbe9",
+                "on-secondary-fixed": "#23005b",
+                "tertiary-container": "#fed639",
+                "primary-fixed": "#7df4ff",
+                "primary": "#dbfcff",
+                "on-error-container": "#ffdad6",
+                "surface-container-lowest": "#0c0e17",
+                "accent-pink": "#f92a82"
+            },
+            fontFamily: {
+                "headline": ["\"Space Grotesk\"", "sans-serif"],
+                "body": ["\"Space Grotesk\"", "sans-serif"],
+                "label": ["\"Space Grotesk\"", "sans-serif"],
+                "display": ["Orbitron", "sans-serif"],
+                "orbitron": ["Orbitron", "sans-serif"]
+            },
+            borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+        },
+    },
+};

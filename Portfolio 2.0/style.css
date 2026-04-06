@@ -1,0 +1,119 @@
+/* ==========================================
+   CSS GLOBALE - ZAKER PORTFOLIO
+   Stili Condivisi per Cursore, Scrollbar, Lightbox e Lingue
+   ========================================== */
+
+/* ------------------------------------------
+   Impostazioni di Base e Scrollbar
+------------------------------------------ */
+*, *::before, *::after {
+    cursor: none !important;
+}
+html, body {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #0c0e17; }
+::-webkit-scrollbar-thumb { 
+    background: #00f0ff; /* Secondary neon cyan */
+    border-radius: 5px; 
+}
+::-webkit-scrollbar-thumb:hover { background: #00e0ef; }
+
+/* ------------------------------------------
+   Cursore Custom Neon
+------------------------------------------ */
+#zk-cursor {
+    position: fixed;
+    top: 0; left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%); /* Centra esattamente la punta */
+    transition: opacity 0.2s; /* RIMOSSO transform transition per eliminare il lag */
+    will-change: transform;
+    mix-blend-mode: difference;
+}
+/* Stile base del cursore */
+#zk-cursor svg {
+    /* La punta deve essere inclinata verso nord-ovest per essere realistica */
+    transform: rotate(-45deg);
+    transition: transform 0.15s ease, filter 0.15s ease;
+    filter: drop-shadow(0 0 8px rgba(0,240,255,0.8));
+}
+/* Effetto Hover (quando passi su un elemento cliccabile) */
+.hovering #zk-cursor svg {
+    transform: rotate(-45deg) scale(1.5);
+    filter: drop-shadow(0 0 12px rgba(249,42,130,0.8)); /* Glow diventa magenta */
+}
+
+/* ------------------------------------------
+   UI e Menu
+------------------------------------------ */
+#mobile-menu { display: none; }
+#mobile-menu.open { display: flex; }
+
+.card-glow:hover {
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.1);
+    border-color: rgba(0, 240, 255, 0.3);
+}
+
+/* ------------------------------------------
+   Lightbox (Archivio e Media)
+------------------------------------------ */
+#zk-lightbox {
+    backdrop-filter: blur(10px);
+}
+#zk-lightbox img, #zk-lightbox video {
+    will-change: transform; /* Ottimizza l'animazione dello scale */
+    transition: transform 0.1s ease-out; /* Zoom molto fluido */
+    transform-origin: center center;
+}
+
+/* Blocco Scroll quando la lightbox è attiva */
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* ------------------------------------------
+   Controllo Sistema Lingue (IT / EN)
+------------------------------------------ */
+html[lang="it"] .lang-en { display: none !important; }
+html[lang="en"] .lang-it { display: none !important; }
+
+/* ------------------------------------------
+   Utility Class (Chi Sono)
+------------------------------------------ */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+}
+.cyber-border {
+    position: relative;
+}
+.cyber-border::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%; height: 1px;
+    background: linear-gradient(90deg, transparent, #00f0ff, #f92a82, transparent);
+    opacity: 0.5;
+}
+.neon-glow-cyan { box-shadow: 0 0 15px rgba(0, 240, 255, 0.3); }
+.neon-glow-magenta { box-shadow: 0 0 15px rgba(249, 42, 130, 0.3); }
+.glass-panel {
+    background: rgba(17, 19, 28, 0.6);
+    backdrop-filter: blur(20px);
+}
+
+/* ------------------------------------------
+   Cursore Animations extra (Chi Sono style)
+------------------------------------------ */
+#zk-cursor.zk-click svg {
+    filter: drop-shadow(0 0 4px #f92a82) drop-shadow(0 0 10px rgba(249,42,130,0.65)) drop-shadow(0 0 20px rgba(249,42,130,0.3));
+    transform: rotate(-45deg) scale(0.88);
+}
+#zk-cursor.zk-hover svg {
+    filter: drop-shadow(0 0 5px #00f0ff) drop-shadow(0 0 14px rgba(0,240,255,0.7)) drop-shadow(0 0 26px rgba(0,240,255,0.35));
+    transform: rotate(-45deg) scale(1.15);
+}
