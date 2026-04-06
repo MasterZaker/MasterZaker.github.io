@@ -1,77 +1,106 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="it"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Chi Sono | Gaspare Cipolletta — NEON_CURATOR</title>
-<meta name="description" content="Scopri chi è Gaspare Cipolletta: Game Designer, Technical Artist e modellatore 3D con passione per mondi immersivi e narrative interattive."/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=Manrope:wght@400;500;700;800&amp;family=Orbitron:wght@400;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="tailwind-setup.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <script src="lang.js"></script>
-    <script src="main.js"></script>
-</head>
-<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<html class="dark" lang="it">
 
-<!-- ========================================== -->
-<!-- NAVBAR SUPERIORE E MENU MOBILE             -->
-<!-- ========================================== -->
-<header class="fixed top-0 w-full z-50 bg-[#11131c]/60 backdrop-blur-xl border-b border-[#3b494b]/20 shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
-<div class="relative flex items-center px-8 h-20 w-full max-w-[1920px] mx-auto">
-<a href="index.html" class="text-2xl font-black tracking-tighter text-[#00f0ff] drop-shadow-[0_0_8px_rgba(0,240,255,0.5)] font-display">
-                ZAKER
-            </a>
-<nav class="hidden md:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
-<a class="text-[#e1e1ef]/60 hover:text-[#e1e1ef] transition-colors font-['Space_Grotesk'] uppercase tracking-widest text-sm" href="index.html"><span class="lang-it">HOME</span><span class="lang-en">HOME</span></a>
-<a class="text-[#e1e1ef]/60 hover:text-[#e1e1ef] transition-colors font-['Space_Grotesk'] uppercase tracking-widest text-sm" href="archivio.html"><span class="lang-it">PROGETTI</span><span class="lang-en">PROJECTS</span></a>
-<a class="text-[#00f0ff] border-b-2 border-[#00f0ff] pb-1 font-['Space_Grotesk'] uppercase tracking-widest text-sm" href="chi-sono.html"><span class="lang-it">CHI SONO</span><span class="lang-en">ABOUT ME</span></a>
-</nav>
-<div class="ml-auto flex items-center gap-4">
-<button onclick="toggleLang()" class="text-on-surface-variant hover:text-primary-container font-display font-medium text-sm tracking-widest transition-colors hidden md:block">
-    <span class="material-symbols-outlined text-lg align-middle mr-1">translate</span><span class="lang-switcher-text">EN</span>
-</button>
-<a href="chi-sono.html" class="hidden md:block bg-primary text-on-primary font-headline font-bold px-6 py-2 text-sm tracking-widest rounded-sm hover:bg-surface-tint transition-all active:scale-95 duration-200">HIRE_ME</a>
-<button onclick="document.getElementById('mobile-menu').classList.toggle('open')" class="md:hidden text-on-surface-variant">
-    <span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-</div>
-<!-- Mobile Menu -->
-<div id="mobile-menu" class="flex-col gap-4 px-8 pb-6 bg-[#11131c]/95 border-t border-[#3b494b]/20">
-    <a href="index.html" class="text-[#e1e1ef]/70 font-['Space_Grotesk'] uppercase tracking-widest text-sm py-2"><span class="lang-it">HOME</span><span class="lang-en">HOME</span></a>
-    <a href="archivio.html" class="text-[#e1e1ef]/70 font-['Space_Grotesk'] uppercase tracking-widest text-sm py-2"><span class="lang-it">PROGETTI</span><span class="lang-en">PROJECTS</span></a>
-    <a href="chi-sono.html" class="text-[#00f0ff] font-['Space_Grotesk'] uppercase tracking-widest text-sm py-2"><span class="lang-it">CHI SONO</span><span class="lang-en">ABOUT ME</span></a>
-    <button onclick="toggleLang()" class="text-left text-on-surface-variant hover:text-primary-container font-['Space_Grotesk'] uppercase tracking-widest text-sm py-2 mt-2 border-t border-[#3b494b]/20">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Chi Sono | Gaspare Cipolletta — NEON_CURATOR</title>
+  <meta name="description"
+    content="Scopri chi è Gaspare Cipolletta: Game Designer, Technical Artist e modellatore 3D con passione per mondi immersivi e narrative interattive." />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=Manrope:wght@400;500;700;800&amp;family=Orbitron:wght@400;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="tailwind-setup.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="lang.js"></script>
+  <script src="main.js"></script>
+</head>
+
+<body
+  class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+
+  <!-- ========================================== -->
+  <!-- NAVBAR SUPERIORE E MENU MOBILE             -->
+  <!-- ========================================== -->
+  <header
+    class="fixed top-0 w-full z-50 bg-[#11131c]/60 backdrop-blur-xl border-b border-[#3b494b]/20 shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
+    <div class="relative flex items-center px-8 h-20 w-full max-w-[1920px] mx-auto">
+      <a href="index.html"
+        class="text-2xl font-black tracking-tighter text-[#00f0ff] drop-shadow-[0_0_8px_rgba(0,240,255,0.5)] font-display">
+        ZAKER
+      </a>
+      <nav class="hidden md:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
+        <a class="text-[#e1e1ef]/60 hover:text-[#e1e1ef] transition-colors font-['Space_Grotesk'] uppercase tracking-widest text-sm"
+          href="index.html"><span class="lang-it">HOME</span><span class="lang-en">HOME</span></a>
+        <a class="text-[#e1e1ef]/60 hover:text-[#e1e1ef] transition-colors font-['Space_Grotesk'] uppercase tracking-widest text-sm"
+          href="archivio.html"><span class="lang-it">PROGETTI</span><span class="lang-en">PROJECTS</span></a>
+        <a class="text-[#00f0ff] border-b-2 border-[#00f0ff] pb-1 font-['Space_Grotesk'] uppercase tracking-widest text-sm"
+          href="chi-sono.html"><span class="lang-it">CHI SONO</span><span class="lang-en">ABOUT ME</span></a>
+      </nav>
+      <div class="ml-auto flex items-center gap-4">
+        <button onclick="toggleLang()"
+          class="text-on-surface-variant hover:text-primary-container font-display font-medium text-sm tracking-widest transition-colors hidden md:block">
+          <span class="material-symbols-outlined text-lg align-middle mr-1">translate</span><span
+            class="lang-switcher-text">EN</span>
+        </button>
+        <a href="chi-sono.html"
+          class="hidden md:block bg-primary text-on-primary font-headline font-bold px-6 py-2 text-sm tracking-widest rounded-sm hover:bg-surface-tint transition-all active:scale-95 duration-200">HIRE_ME</a>
+        <button onclick="document.getElementById('mobile-menu').classList.toggle('open')"
+          class="md:hidden text-on-surface-variant">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="flex-col gap-4 px-8 pb-6 bg-[#11131c]/95 border-t border-[#3b494b]/20">
+      <a href="index.html" class="text-[#e1e1ef]/70 font-['Space_Grotesk'] uppercase tracking-widest text-sm py-2"><span
+          class="lang-it">HOME</span><span class="lang-en">HOME</span></a>
+      <a href="archivio.html"
+        class="text-[#e1e1ef]/70 font-['Space_Grotesk'] uppercase tracking-widest text-sm py-2"><span
+          class="lang-it">PROGETTI</span><span class="lang-en">PROJECTS</span></a>
+      <a href="chi-sono.html" class="text-[#00f0ff] font-['Space_Grotesk'] uppercase tracking-widest text-sm py-2"><span
+          class="lang-it">CHI SONO</span><span class="lang-en">ABOUT ME</span></a>
+      <button onclick="toggleLang()"
+        class="text-left text-on-surface-variant hover:text-primary-container font-['Space_Grotesk'] uppercase tracking-widest text-sm py-2 mt-2 border-t border-[#3b494b]/20">
         <span class="material-symbols-outlined text-sm align-middle mr-1">translate</span>
         <span class="lang-it">CAMBIA IN INGLESE</span><span class="lang-en">SWITCH TO ITALIAN</span>
-    </button>
-</div>
-</header>
+      </button>
+    </div>
+  </header>
 
-<!-- ========================================== -->
-<!-- CONTENUTO PRINCIPALE DELLA PAGINA          -->
-<!-- ========================================== -->
-<main class="pt-32 pb-20 px-6 max-w-7xl mx-auto space-y-40">
+  <!-- ========================================== -->
+  <!-- CONTENUTO PRINCIPALE DELLA PAGINA          -->
+  <!-- ========================================== -->
+  <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto space-y-40">
 
-<!-- ========================================== -->
-<!-- SEZIONE EROE: PRESENTAZIONE PROFILO        -->
-<!-- ========================================== -->
-<section class="flex flex-col lg:flex-row items-center gap-16">
-<div class="flex-1 space-y-8 text-left">
-<div class="space-y-2">
-<span class="font-label text-xs tracking-[0.2em] text-[#f92a82] uppercase"><span class="lang-it">Game Designer</span><span class="lang-en">Game Designer</span></span>
-<h1 class="font-display text-5xl md:text-7xl font-bold leading-none tracking-tighter">
-                        GASPARE <br/>
-<span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00f0ff] to-[#f92a82]">CIPOLLETTA</span>
-</h1>
-</div>
-<p class="text-lg text-on-surface-variant max-w-xl leading-relaxed font-light">
-    <span class="lang-it">Sviluppatore e 3D Generalist multidisciplinare, capace di seguire l'intero ciclo di vita di un progetto, dall'ideazione narrativa alla modellazione, fino alla programmazione e al level design in Unity. Unisco logica e creatività per trasformare idee complesse in esperienze interattive complete e strutturate.</span>
-    <span class="lang-en">Multidisciplinary Developer and 3D Generalist, capable of following the entire lifecycle of a project, from narrative ideation to modeling, up to programming and level design in Unity. I blend logic and creativity to turn complex ideas into complete, structured interactive experiences.</span>
-</p>
-<!-- Pulsanti nascosti temporaneamente come richiesto:
+    <!-- ========================================== -->
+    <!-- SEZIONE EROE: PRESENTAZIONE PROFILO        -->
+    <!-- ========================================== -->
+    <section class="flex flex-col lg:flex-row items-center gap-16">
+      <div class="flex-1 space-y-8 text-left">
+        <div class="space-y-2">
+          <span class="font-label text-xs tracking-[0.2em] text-[#f92a82] uppercase"><span class="lang-it">Game
+              Designer</span><span class="lang-en">Game Designer</span></span>
+          <h1 class="font-display text-5xl md:text-7xl font-bold leading-none tracking-tighter">
+            GASPARE <br />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00f0ff] to-[#f92a82]">CIPOLLETTA</span>
+          </h1>
+        </div>
+        <p class="text-lg text-on-surface-variant max-w-xl leading-relaxed font-light">
+          <span class="lang-it">Sviluppatore e 3D Generalist multidisciplinare, capace di seguire l'intero ciclo di vita
+            di un progetto, dall'ideazione narrativa alla modellazione, fino alla programmazione e al level design in
+            Unity. Unisco logica e creatività per trasformare idee complesse in esperienze interattive complete e
+            strutturate.</span>
+          <span class="lang-en">Multidisciplinary Developer and 3D Generalist, capable of following the entire lifecycle
+            of a project, from narrative ideation to modeling, up to programming and level design in Unity. I blend
+            logic and creativity to turn complex ideas into complete, structured interactive experiences.</span>
+        </p>
+        <!-- Pulsanti nascosti temporaneamente come richiesto:
 <div class="flex gap-4">
 <button class="bg-[#dbfcff] text-[#00363a] px-8 py-3 font-label font-bold text-xs uppercase tracking-widest rounded-sm hover:shadow-[0_0_20px_rgba(0,219,233,0.4)] transition-all">
     <span class="lang-it">Scarica CV</span><span class="lang-en">Download CV</span>
@@ -81,264 +110,330 @@
 </a>
 </div>
 -->
-</div>
-<div class="relative group">
-<div class="absolute -inset-4 bg-gradient-to-tr from-[#00f0ff] to-[#f92a82] opacity-20 blur-2xl group-hover:opacity-40 transition-opacity"></div>
-<div class="w-80 h-80 md:w-96 md:h-96 bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden relative z-10">
-<img alt="Gaspare Cipolletta Profile" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhZnhWToCkGHf-YRflEkyuADer88_NvIWXnv5jEYKrIfICvHWmqzEGnnUqlrAwkmiGnsT_0SnLPTGRhlhnP06_-d5us1TE4rkWvmVtJG9CJOC-Z_TuTedE1sPWuu_I4_2mJtItDcIkquwsHPJewubcWTTLS6WIQifRwcrQuPSgCHzTUmX1UpIhZ9wJd0GLFUtDMCWQRRQg4vq5ukaAII_qLFQz025qrdZ07ImRba5VbNBEu6MfSdn_ULeQwMNgBX5FnHMiOBpT7ZHM"/>
-<div class="absolute bottom-4 left-4 right-4 p-4 glass-panel border border-white/10 rounded-lg">
-<div class="flex justify-between items-center">
-<span class="font-orbitron text-[10px] text-[#00f0ff]">STATUS: ONLINE</span>
-<span class="font-orbitron text-[10px] text-[#f92a82]">VER_2.0.24</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- ========================================== -->
-<!-- SEZIONE PASSIONI (BENTO GRID)              -->
-<!-- ========================================== -->
-<section class="space-y-12">
-<div class="space-y-2 border-l-4 border-[#f92a82] pl-6">
-<h2 class="font-display text-3xl font-bold tracking-tight uppercase"><span class="lang-it">Core Drives</span><span class="lang-en">Core Drives</span></h2>
-<p class="font-label text-sm text-on-surface-variant uppercase tracking-widest"><span class="lang-it">Cosa alimenta il mio motore creativo</span><span class="lang-en">What fuels my creative engine</span></p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-<!-- Gaming -> Unity -->
-<div class="md:col-span-2 bg-surface-container-low p-8 rounded-xl border border-outline-variant/10 hover:border-[#00f0ff]/40 transition-all group relative overflow-hidden">
-<div class="absolute -right-10 -bottom-10 opacity-5 group-hover:opacity-10 transition-opacity">
-<span class="material-symbols-outlined text-[12rem]">sports_esports</span>
-</div>
-<div class="relative z-10 space-y-4">
-<span class="material-symbols-outlined text-[#00f0ff] text-4xl">sports_esports</span>
-<h3 class="font-headline text-2xl font-bold"><span class="lang-it">Sviluppo Unity &amp; Web</span><span class="lang-en">Unity &amp; Web Dev</span></h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">
-    <span class="lang-it">Level Design e World-building in Unity 3D, supportato da programmazione in C# e sviluppo web front-end (HTML/CSS).</span>
-    <span class="lang-en">Level Design and World-building in Unity 3D, supported by C# programming and front-end web development (HTML/CSS).</span>
-</p>
-</div>
-</div>
-<!-- Arte 3D -->
-<div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/10 hover:border-[#f92a82]/40 transition-all group">
-<div class="space-y-4">
-<span class="material-symbols-outlined text-[#f92a82] text-4xl">3d_rotation</span>
-<h3 class="font-headline text-2xl font-bold"><span class="lang-it">3D Art & Animazione</span><span class="lang-en">3D Art & Animation</span></h3>
-<p class="text-sm text-on-surface-variant">
-    <span class="lang-it">Modellazione Hard Surface e organica su Blender, UV Mapping, creazione materiali, texturing e animazione 3D.</span>
-    <span class="lang-en">Hard Surface and organic modeling in Blender, UV Mapping, material creation, texturing and 3D animation.</span>
-</p>
-</div>
-</div>
-<!-- Storytelling -> Game Design -->
-<div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/10 hover:border-[#00f0ff]/40 transition-all group">
-<div class="space-y-4">
-<span class="material-symbols-outlined text-[#00f0ff] text-4xl">auto_stories</span>
-<h3 class="font-headline text-2xl font-bold"><span class="lang-it">Game Design & Narrativa</span><span class="lang-en">Game Design & Narrative</span></h3>
-<p class="text-sm text-on-surface-variant">
-    <span class="lang-it">Stesura di GDD completi, scrittura narrativa, progettazione di meccaniche, core loop e bilanciamento di gioco.</span>
-    <span class="lang-en">Complete GDD drafting, narrative writing, mechanics design, core loops and game balancing.</span>
-</p>
-</div>
-</div>
-<!-- Tecnologia -->
-<div class="md:col-span-4 bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/10 flex flex-col md:flex-row items-center gap-8 hover:bg-surface-container transition-colors">
-<div class="p-4 bg-surface-container-highest rounded-full">
-<span class="material-symbols-outlined text-4xl text-[#f92a82]">memory</span>
-</div>
-<div class="flex-1 space-y-2 text-center md:text-left">
-<h3 class="font-headline text-2xl font-bold uppercase tracking-tight"><span class="lang-it">Tecnologia &amp; Innovazione</span><span class="lang-en">Tech &amp; Innovation</span></h3>
-<p class="text-on-surface-variant max-w-2xl">
-    <span class="lang-it">Sempre alla ricerca dell'ultimo plugin, dell'integrazione AI o della nuova release engine che sposti l'asticella del possibile.</span>
-    <span class="lang-en">Always searching for the latest plugin, AI integration, or new engine release that pushes the bar of what's possible.</span>
-</p>
-</div>
-</div>
-</div>
-</section>
-
-<!-- ========================================== -->
-<!-- SEZIONE METODOLOGIA (TESTI LUNGHI)         -->
-<!-- ========================================== -->
-<section class="space-y-12">
-<div class="space-y-2 border-l-4 border-[#00f0ff] pl-6">
-<h2 class="font-display text-3xl font-bold tracking-tight uppercase"><span class="lang-it">Metodo & Processo Creativo</span><span class="lang-en">Method & Creative Process</span></h2>
-<p class="font-label text-sm text-on-surface-variant uppercase tracking-widest"><span class="lang-it">In profondità</span><span class="lang-en">In depth</span></p>
-</div>
-<div class="space-y-8">
-    <!-- Box 1 -->
-    <div class="bg-surface-container-lowest p-8 md:p-12 border border-outline-variant/10 rounded-xl hover:border-[#f92a82]/40 transition-all flex flex-col md:flex-row gap-8 items-start">
-        <span class="material-symbols-outlined text-[#f92a82] text-5xl">3d_rotation</span>
-        <div class="space-y-4">
-            <h3 class="font-headline text-2xl font-bold uppercase"><span class="lang-it">Modellazione 3D e Animazione</span><span class="lang-en">3D Modeling & Animation</span></h3>
-            <p class="text-on-surface-variant leading-relaxed">
-                <span class="lang-it">Curo l'intero processo visivo, trasformando concept in asset pronti per il motore di gioco. Lavoro principalmente su Blender, dove sono specializzato nella modellazione Hard Surface con solide basi di modellazione organica. Mi occupo di ogni fase della pipeline grafica: dall'ottimizzazione dell'UV mapping alla creazione di materiali e texture dettagliate, fino all'animazione 3D per dare vita a personaggi e prop.</span>
-                <span class="lang-en">I manage the entire visual process, transforming concepts into game-ready assets. I work mainly on Blender, where I specialize in Hard Surface modeling with solid foundations in organic modeling. I handle every phase of the graphics pipeline: from UV mapping optimization to the creation of detailed materials and textures, down to 3D animation to bring characters and props to life.</span>
-            </p>
+      </div>
+      <div class="relative group">
+        <div
+          class="absolute -inset-4 bg-gradient-to-tr from-[#00f0ff] to-[#f92a82] opacity-20 blur-2xl group-hover:opacity-40 transition-opacity">
         </div>
-    </div>
-    <!-- Box 2 -->
-    <div class="bg-surface-container-lowest p-8 md:p-12 border border-outline-variant/10 rounded-xl hover:border-[#00f0ff]/40 transition-all flex flex-col md:flex-row gap-8 items-start">
-        <span class="material-symbols-outlined text-[#00f0ff] text-5xl">sports_esports</span>
-        <div class="space-y-4">
-            <h3 class="font-headline text-2xl font-bold uppercase"><span class="lang-it">Sviluppo Unity e Level Design</span><span class="lang-en">Unity Development & Level Design</span></h3>
-            <p class="text-on-surface-variant leading-relaxed">
-                <span class="lang-it">Il mio ambiente naturale per dare vita ai mondi è Unity 3D. Ho una forte competenza nel Level Design e nel World-building, curando l'estetica e la navigabilità degli ambienti. Supporto la mia visione artistica con solide basi tecniche, programmando in C# per gestire logiche di gioco fluide. Inoltre, la mia conoscenza di HTML e CSS mi permette di avere una marcia in più nella gestione di interfacce e progetti web correlati.</span>
-                <span class="lang-en">My natural environment to bring worlds to life is Unity 3D. I have strong expertise in Level Design and World-building, taking care of the aesthetics and navigability of environments. I support my artistic vision with solid technical foundations, programming in C# to manage fluid game logics. Furthermore, my HTML/CSS knowledge gives me an edge in managing interfaces and related web projects.</span>
-            </p>
+        <div
+          class="w-80 h-80 md:w-96 md:h-96 bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden relative z-10">
+          <img alt="Gaspare Cipolletta Profile"
+            class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhZnhWToCkGHf-YRflEkyuADer88_NvIWXnv5jEYKrIfICvHWmqzEGnnUqlrAwkmiGnsT_0SnLPTGRhlhnP06_-d5us1TE4rkWvmVtJG9CJOC-Z_TuTedE1sPWuu_I4_2mJtItDcIkquwsHPJewubcWTTLS6WIQifRwcrQuPSgCHzTUmX1UpIhZ9wJd0GLFUtDMCWQRRQg4vq5ukaAII_qLFQz025qrdZ07ImRba5VbNBEu6MfSdn_ULeQwMNgBX5FnHMiOBpT7ZHM" />
+          <div class="absolute bottom-4 left-4 right-4 p-4 glass-panel border border-white/10 rounded-lg">
+            <div class="flex justify-between items-center">
+              <span class="font-orbitron text-[10px] text-[#00f0ff]">STATUS: ONLINE</span>
+              <span class="font-orbitron text-[10px] text-[#f92a82]">VER_2.0.24</span>
+            </div>
+          </div>
         </div>
-    </div>
-    <!-- Box 3 -->
-    <div class="bg-surface-container-lowest p-8 md:p-12 border border-outline-variant/10 rounded-xl hover:border-[#f92a82]/40 transition-all flex flex-col md:flex-row gap-8 items-start">
-        <span class="material-symbols-outlined text-[#f92a82] text-5xl">auto_stories</span>
-        <div class="space-y-4">
-            <h3 class="font-headline text-2xl font-bold uppercase"><span class="lang-it">Game Design e Direzione Narrativa</span><span class="lang-en">Game Design & Narrative Direction</span></h3>
-            <p class="text-on-surface-variant leading-relaxed">
-                <span class="lang-it">Credo che ogni grande gioco nasca da fondamenta solide. Oltre allo sviluppo tecnico, mi occupo di ideazione, analisi narrativa e scrittura creativa. Strutturo e redigo Game Design Document (GDD) completi in ogni dettaglio: dalla definizione profonda di storia e lore, alla progettazione rigorosa di meccaniche, dinamiche e core loop, fino al bilanciamento dei sistemi di gioco, gestione nemici ed economia degli oggetti.</span>
-                <span class="lang-en">I believe every great game is born from solid foundations. In addition to technical development, I deal with ideation, narrative analysis, and creative writing. I structure and draft detailed Game Design Documents (GDD): from deep story and lore to rigorous design of mechanics, dynamics, and core loops, up to balancing game systems, enemy management, and item economy.</span>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SEZIONE PASSIONI (BENTO GRID)              -->
+    <!-- ========================================== -->
+    <section class="space-y-12">
+      <div class="space-y-2 border-l-4 border-[#f92a82] pl-6">
+        <h2 class="font-display text-3xl font-bold tracking-tight uppercase"><span class="lang-it">Core
+            Drives</span><span class="lang-en">Core Drives</span></h2>
+        <p class="font-label text-sm text-on-surface-variant uppercase tracking-widest"><span class="lang-it">Cosa
+            alimenta il mio motore creativo</span><span class="lang-en">What fuels my creative engine</span></p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <!-- Gaming -> Unity -->
+        <div
+          class="md:col-span-2 bg-surface-container-low p-8 rounded-xl border border-outline-variant/10 hover:border-[#00f0ff]/40 transition-all group relative overflow-hidden">
+          <div class="absolute -right-10 -bottom-10 opacity-5 group-hover:opacity-10 transition-opacity">
+            <span class="material-symbols-outlined text-[12rem]">sports_esports</span>
+          </div>
+          <div class="relative z-10 space-y-4">
+            <span class="material-symbols-outlined text-[#00f0ff] text-4xl">sports_esports</span>
+            <h3 class="font-headline text-2xl font-bold"><span class="lang-it">Sviluppo Unity &amp; Web</span><span
+                class="lang-en">Unity &amp; Web Dev</span></h3>
+            <p class="text-sm text-on-surface-variant leading-relaxed">
+              <span class="lang-it">Level Design e World-building in Unity 3D, supportato da programmazione in C# e
+                sviluppo web front-end (HTML/CSS).</span>
+              <span class="lang-en">Level Design and World-building in Unity 3D, supported by C# programming and
+                front-end web development (HTML/CSS).</span>
             </p>
+          </div>
         </div>
-    </div>
-</div>
-</section>
-
-<!-- ========================================== -->
-<!-- SEZIONE SKILLS MISTE (DUE COLONNE)         -->
-<!-- ========================================== -->
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-24">
-
-<!-- Colonne 1: Hard Skills -->
-<section class="space-y-12">
-<div class="space-y-2 border-l-4 border-[#00f0ff] pl-6">
-<h2 class="font-display text-3xl font-bold tracking-tight uppercase">Technical Specs</h2>
-<p class="font-label text-sm text-on-surface-variant uppercase tracking-widest">Strumenti e Maestria</p>
-</div>
-<div class="space-y-8">
-<div class="space-y-3">
-<div class="flex justify-between items-end">
-<span class="font-headline font-bold text-lg">Unity &amp; C#</span>
-<span class="font-orbitron text-xs text-[#00f0ff]">92%</span>
-</div>
-<div class="h-1 bg-surface-container-highest rounded-full overflow-hidden">
-<div class="h-full bg-[#00f0ff] w-[92%] shadow-[0_0_10px_#00f0ff]"></div>
-</div>
-</div>
-<div class="space-y-3">
-<div class="flex justify-between items-end">
-<span class="font-headline font-bold text-lg">Blender</span>
-<span class="font-orbitron text-xs text-[#f92a82]">88%</span>
-</div>
-<div class="h-1 bg-surface-container-highest rounded-full overflow-hidden">
-<div class="h-full bg-[#f92a82] w-[88%] shadow-[0_0_10px_#f92a82]"></div>
-</div>
-</div>
-<div class="space-y-3">
-<div class="flex justify-between items-end">
-<span class="font-headline font-bold text-lg">Houdini</span>
-<span class="font-orbitron text-xs text-[#00f0ff]">75%</span>
-</div>
-<div class="h-1 bg-surface-container-highest rounded-full overflow-hidden">
-<div class="h-full bg-[#00f0ff] w-[75%] shadow-[0_0_10px_#00f0ff]"></div>
-</div>
-</div>
-<div class="space-y-3">
-<div class="flex justify-between items-end">
-<span class="font-headline font-bold text-lg">Level Design</span>
-<span class="font-orbitron text-xs text-[#f92a82]">95%</span>
-</div>
-<div class="h-1 bg-surface-container-highest rounded-full overflow-hidden">
-<div class="h-full bg-[#f92a82] w-[95%] shadow-[0_0_10px_#f92a82]"></div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Colonne 2: Soft Skills -->
-<section class="space-y-12">
-<div class="space-y-2 border-l-4 border-[#f92a82] pl-6">
-<h2 class="font-display text-3xl font-bold tracking-tight uppercase">Operational Protocol</h2>
-<p class="font-label text-sm text-on-surface-variant uppercase tracking-widest">Metodo e Attitudine</p>
-</div>
-<div class="flex flex-wrap gap-4">
-<div class="bg-surface-container-low border border-[#00f0ff]/20 px-6 py-4 rounded-xl flex items-center gap-4 hover:bg-[#00f0ff]/10 transition-colors cursor-default group">
-<span class="material-symbols-outlined text-[#00f0ff]">groups</span>
-<span class="font-headline font-medium">Teamwork Sync</span>
-</div>
-<div class="bg-surface-container-low border border-[#f92a82]/20 px-6 py-4 rounded-xl flex items-center gap-4 hover:bg-[#f92a82]/10 transition-colors cursor-default group">
-<span class="material-symbols-outlined text-[#f92a82]">psychology</span>
-<span class="font-headline font-medium">Problem Solver</span>
-</div>
-<div class="bg-surface-container-low border border-[#00f0ff]/20 px-6 py-4 rounded-xl flex items-center gap-4 hover:bg-[#00f0ff]/10 transition-colors cursor-default group">
-<span class="material-symbols-outlined text-[#00f0ff]">terminal</span>
-<span class="font-headline font-medium">Logic Driven</span>
-</div>
-<div class="bg-surface-container-low border border-[#f92a82]/20 px-6 py-4 rounded-xl flex items-center gap-4 hover:bg-[#f92a82]/10 transition-colors cursor-default group">
-<span class="material-symbols-outlined text-[#f92a82]">update</span>
-<span class="font-headline font-medium">Fast Learner</span>
-</div>
-<div class="bg-surface-container-low border border-[#00f0ff]/20 px-6 py-4 rounded-xl flex items-center gap-4 hover:bg-[#00f0ff]/10 transition-colors cursor-default group">
-<span class="material-symbols-outlined text-[#00f0ff]">architecture</span>
-<span class="font-headline font-medium">Detail Oriented</span>
-</div>
-</div>
-<!-- Quote Section -->
-<div class="mt-12 p-8 bg-surface-container-lowest rounded-xl border-l-8 border-[#00f0ff] relative overflow-hidden">
-<div class="absolute top-0 right-0 p-4 opacity-10">
-<span class="material-symbols-outlined text-6xl">format_quote</span>
-</div>
-<p class="italic text-lg text-on-surface leading-relaxed relative z-10">
-                        "La differenza tra un buon gioco e un'esperienza indimenticabile risiede nella cura ossessiva per i dettagli che nessuno nota consapevolmente, ma che tutti percepiscono."
-                    </p>
-</div>
-</section>
-</div>
-</main>
-
-<!-- ========================================== -->
-<!-- SEZIONE CONTATTI E FINE PIE DI PAGINA      -->
-<!-- ========================================== -->
-<section class="py-24 px-8 md:px-20 max-w-[1920px] mx-auto">
-<div class="bg-surface-container-lowest rounded-2xl p-12 border border-outline-variant/20 relative overflow-hidden flex flex-col md:flex-row items-center gap-12">
-<div class="absolute top-0 right-0 w-64 h-64 bg-primary-container/5 blur-[120px] rounded-full"></div>
-<div class="absolute bottom-0 left-0 w-64 h-64 bg-accent-pink/5 blur-[120px] rounded-full"></div>
-<div class="relative z-10 flex-1">
-<h2 class="font-display text-3xl font-bold text-on-surface mb-4 uppercase">Pronto per il <span class="text-accent-pink">Next Level?</span></h2>
-<p class="font-body text-on-surface-variant max-w-md">Collaboriamo per trasformare la tua visione in una realtà interattiva. Disponibile per freelance e consulenze tecniche.</p>
-</div>
-<div class="relative z-10 w-full md:w-auto">
-<div class="flex flex-col sm:flex-row gap-4">
-<input class="bg-surface-container-high border-outline/20 text-on-surface px-6 py-4 font-label text-sm min-w-[300px] focus:ring-1 focus:ring-primary-container focus:border-primary-container outline-none transition-all uppercase tracking-widest" placeholder="IL_TUO_EMAIL@PROVIDER.COM" type="email"/>
-<button class="bg-primary-container text-on-primary px-8 py-4 font-headline font-black uppercase tracking-widest hover:bg-surface-tint transition-all active:scale-95">CONNETTITI</button>
-</div>
-</div>
-</div>
-</section>
-
-<!-- ========================================== -->
-<!-- FOOTER                                     -->
-<!-- ========================================== -->
-<footer class="bg-[#0c0e17] w-full py-12 px-8 mt-20 border-t border-[#3b494b]/10">
-<div class="flex flex-col gap-6 max-w-7xl mx-auto">
-<div class="flex flex-col md:flex-row justify-between items-center gap-4">
-<div class="text-[#00f0ff] font-bold text-xl font-display tracking-tighter">
-                ZAKER <span class="text-on-surface-variant/40 font-light font-body">| GAME_DEV</span>
-</div>
-<p class="text-[#b9cacb] font-['Manrope'] text-[0.6875rem] uppercase tracking-[0.2em] font-light">
-                ©2026 GASPARE CIPOLLETTA A.K.A ZAKER. <span class="lang-it">TUTTI I DIRITTI RISERVATI.</span><span class="lang-en">ALL RIGHTS RESERVED.</span>
+        <!-- Arte 3D -->
+        <div
+          class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/10 hover:border-[#f92a82]/40 transition-all group">
+          <div class="space-y-4">
+            <span class="material-symbols-outlined text-[#f92a82] text-4xl">3d_rotation</span>
+            <h3 class="font-headline text-2xl font-bold"><span class="lang-it">3D Art & Animazione</span><span
+                class="lang-en">3D Art & Animation</span></h3>
+            <p class="text-sm text-on-surface-variant">
+              <span class="lang-it">Modellazione Hard Surface e organica su Blender, UV Mapping, creazione materiali,
+                texturing e animazione 3D.</span>
+              <span class="lang-en">Hard Surface and organic modeling in Blender, UV Mapping, material creation,
+                texturing and 3D animation.</span>
             </p>
-</div>
-<div class="flex justify-center gap-8 font-['Manrope'] text-[0.75rem] tracking-[0.1em] uppercase text-[#b9cacb] border-t border-[#3b494b]/10 pt-6">
-<a class="hover:text-[#dbfcff] transition-all opacity-80 hover:opacity-100" href="#">INSTAGRAM</a>
-<a class="hover:text-[#dbfcff] transition-all opacity-80 hover:opacity-100" href="#">ARTSTATION</a>
-<a class="hover:text-[#dbfcff] transition-all opacity-80 hover:opacity-100" href="#">LINKEDIN</a>
-<a class="hover:text-[#dbfcff] transition-all opacity-80 hover:opacity-100" href="#">GITHUB</a>
-</div>
-</div>
-</div>
-</footer>
+          </div>
+        </div>
+        <!-- Storytelling -> Game Design -->
+        <div
+          class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/10 hover:border-[#00f0ff]/40 transition-all group">
+          <div class="space-y-4">
+            <span class="material-symbols-outlined text-[#00f0ff] text-4xl">auto_stories</span>
+            <h3 class="font-headline text-2xl font-bold"><span class="lang-it">Game Design & Narrativa</span><span
+                class="lang-en">Game Design & Narrative</span></h3>
+            <p class="text-sm text-on-surface-variant">
+              <span class="lang-it">Stesura di GDD completi, scrittura narrativa, progettazione di meccaniche, core loop
+                e bilanciamento di gioco.</span>
+              <span class="lang-en">Complete GDD drafting, narrative writing, mechanics design, core loops and game
+                balancing.</span>
+            </p>
+          </div>
+        </div>
+        <!-- Tecnologia -->
+        <div
+          class="md:col-span-4 bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/10 flex flex-col md:flex-row items-center gap-8 hover:bg-surface-container transition-colors">
+          <div class="p-4 bg-surface-container-highest rounded-full">
+            <span class="material-symbols-outlined text-4xl text-[#f92a82]">memory</span>
+          </div>
+          <div class="flex-1 space-y-2 text-center md:text-left">
+            <h3 class="font-headline text-2xl font-bold uppercase tracking-tight"><span class="lang-it">Tecnologia &amp;
+                Innovazione</span><span class="lang-en">Tech &amp; Innovation</span></h3>
+            <p class="text-on-surface-variant max-w-2xl">
+              <span class="lang-it">Sempre alla ricerca dell'ultimo plugin, dell'integrazione AI o della nuova release
+                engine che sposti l'asticella del possibile.</span>
+              <span class="lang-en">Always searching for the latest plugin, AI integration, or new engine release that
+                pushes the bar of what's possible.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- ========================================== -->
-<!-- SCRIPT DEL CURSORE PERSONALIZZATO          -->
-<!-- ========================================== -->
-</body></html>
+    <!-- ========================================== -->
+    <!-- SEZIONE METODOLOGIA (TESTI LUNGHI)         -->
+    <!-- ========================================== -->
+    <section class="space-y-12">
+      <div class="space-y-2 border-l-4 border-[#00f0ff] pl-6">
+        <h2 class="font-display text-3xl font-bold tracking-tight uppercase"><span class="lang-it">Metodo & Processo
+            Creativo</span><span class="lang-en">Method & Creative Process</span></h2>
+        <p class="font-label text-sm text-on-surface-variant uppercase tracking-widest"><span class="lang-it">In
+            profondità</span><span class="lang-en">In depth</span></p>
+      </div>
+      <div class="space-y-8">
+        <!-- Box 1 -->
+        <div
+          class="bg-surface-container-lowest p-8 md:p-12 border border-outline-variant/10 rounded-xl hover:border-[#f92a82]/40 transition-all flex flex-col md:flex-row gap-8 items-start">
+          <span class="material-symbols-outlined text-[#f92a82] text-5xl">3d_rotation</span>
+          <div class="space-y-4">
+            <h3 class="font-headline text-2xl font-bold uppercase"><span class="lang-it">Modellazione 3D e
+                Animazione</span><span class="lang-en">3D Modeling & Animation</span></h3>
+            <p class="text-on-surface-variant leading-relaxed">
+              <span class="lang-it">Curo l'intero processo visivo, trasformando concept in asset pronti per il motore di
+                gioco. Lavoro principalmente su Blender, dove sono specializzato nella modellazione Hard Surface con
+                solide basi di modellazione organica. Mi occupo di ogni fase della pipeline grafica: dall'ottimizzazione
+                dell'UV mapping alla creazione di materiali e texture dettagliate, fino all'animazione 3D per dare vita
+                a personaggi e prop.</span>
+              <span class="lang-en">I manage the entire visual process, transforming concepts into game-ready assets. I
+                work mainly on Blender, where I specialize in Hard Surface modeling with solid foundations in organic
+                modeling. I handle every phase of the graphics pipeline: from UV mapping optimization to the creation of
+                detailed materials and textures, down to 3D animation to bring characters and props to life.</span>
+            </p>
+          </div>
+        </div>
+        <!-- Box 2 -->
+        <div
+          class="bg-surface-container-lowest p-8 md:p-12 border border-outline-variant/10 rounded-xl hover:border-[#00f0ff]/40 transition-all flex flex-col md:flex-row gap-8 items-start">
+          <span class="material-symbols-outlined text-[#00f0ff] text-5xl">sports_esports</span>
+          <div class="space-y-4">
+            <h3 class="font-headline text-2xl font-bold uppercase"><span class="lang-it">Sviluppo Unity e Level
+                Design</span><span class="lang-en">Unity Development & Level Design</span></h3>
+            <p class="text-on-surface-variant leading-relaxed">
+              <span class="lang-it">Il mio ambiente naturale per dare vita ai mondi è Unity 3D. Ho una forte competenza
+                nel Level Design e nel World-building, curando l'estetica e la navigabilità degli ambienti. Supporto la
+                mia visione artistica con solide basi tecniche, programmando in C# per gestire logiche di gioco fluide.
+                Inoltre, la mia conoscenza di HTML e CSS mi permette di avere una marcia in più nella gestione di
+                interfacce e progetti web correlati.</span>
+              <span class="lang-en">My natural environment to bring worlds to life is Unity 3D. I have strong expertise
+                in Level Design and World-building, taking care of the aesthetics and navigability of environments. I
+                support my artistic vision with solid technical foundations, programming in C# to manage fluid game
+                logics. Furthermore, my HTML/CSS knowledge gives me an edge in managing interfaces and related web
+                projects.</span>
+            </p>
+          </div>
+        </div>
+        <!-- Box 3 -->
+        <div
+          class="bg-surface-container-lowest p-8 md:p-12 border border-outline-variant/10 rounded-xl hover:border-[#f92a82]/40 transition-all flex flex-col md:flex-row gap-8 items-start">
+          <span class="material-symbols-outlined text-[#f92a82] text-5xl">auto_stories</span>
+          <div class="space-y-4">
+            <h3 class="font-headline text-2xl font-bold uppercase"><span class="lang-it">Game Design e Direzione
+                Narrativa</span><span class="lang-en">Game Design & Narrative Direction</span></h3>
+            <p class="text-on-surface-variant leading-relaxed">
+              <span class="lang-it">Credo che ogni grande gioco nasca da fondamenta solide. Oltre allo sviluppo tecnico,
+                mi occupo di ideazione, analisi narrativa e scrittura creativa. Strutturo e redigo Game Design Document
+                (GDD) completi in ogni dettaglio: dalla definizione profonda di storia e lore, alla progettazione
+                rigorosa di meccaniche, dinamiche e core loop, fino al bilanciamento dei sistemi di gioco, gestione
+                nemici ed economia degli oggetti.</span>
+              <span class="lang-en">I believe every great game is born from solid foundations. In addition to technical
+                development, I deal with ideation, narrative analysis, and creative writing. I structure and draft
+                detailed Game Design Documents (GDD): from deep story and lore to rigorous design of mechanics,
+                dynamics, and core loops, up to balancing game systems, enemy management, and item economy.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- ========================================== -->
+    <!-- SEZIONE SKILLS MISTE (DUE COLONNE)         -->
+    <!-- ========================================== -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-24">
+
+      <!-- Colonne 1: Hard Skills -->
+      <section class="space-y-12">
+        <div class="space-y-2 border-l-4 border-[#00f0ff] pl-6">
+          <h2 class="font-display text-3xl font-bold tracking-tight uppercase">Technical Specs</h2>
+          <p class="font-label text-sm text-on-surface-variant uppercase tracking-widest">Strumenti e Maestria</p>
+        </div>
+        <div class="space-y-8">
+          <div class="space-y-3">
+            <div class="flex justify-between items-end">
+              <span class="font-headline font-bold text-lg">Unity &amp; C#</span>
+              <span class="font-orbitron text-xs text-[#00f0ff]">92%</span>
+            </div>
+            <div class="h-1 bg-surface-container-highest rounded-full overflow-hidden">
+              <div class="h-full bg-[#00f0ff] w-[92%] shadow-[0_0_10px_#00f0ff]"></div>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <div class="flex justify-between items-end">
+              <span class="font-headline font-bold text-lg">Blender</span>
+              <span class="font-orbitron text-xs text-[#f92a82]">88%</span>
+            </div>
+            <div class="h-1 bg-surface-container-highest rounded-full overflow-hidden">
+              <div class="h-full bg-[#f92a82] w-[88%] shadow-[0_0_10px_#f92a82]"></div>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <div class="flex justify-between items-end">
+              <span class="font-headline font-bold text-lg">Houdini</span>
+              <span class="font-orbitron text-xs text-[#00f0ff]">75%</span>
+            </div>
+            <div class="h-1 bg-surface-container-highest rounded-full overflow-hidden">
+              <div class="h-full bg-[#00f0ff] w-[75%] shadow-[0_0_10px_#00f0ff]"></div>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <div class="flex justify-between items-end">
+              <span class="font-headline font-bold text-lg">Level Design</span>
+              <span class="font-orbitron text-xs text-[#f92a82]">95%</span>
+            </div>
+            <div class="h-1 bg-surface-container-highest rounded-full overflow-hidden">
+              <div class="h-full bg-[#f92a82] w-[95%] shadow-[0_0_10px_#f92a82]"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Colonne 2: Soft Skills -->
+      <section class="space-y-12">
+        <div class="space-y-2 border-l-4 border-[#f92a82] pl-6">
+          <h2 class="font-display text-3xl font-bold tracking-tight uppercase">Operational Protocol</h2>
+          <p class="font-label text-sm text-on-surface-variant uppercase tracking-widest">Metodo e Attitudine</p>
+        </div>
+        <div class="flex flex-wrap gap-4">
+          <div
+            class="bg-surface-container-low border border-[#00f0ff]/20 px-6 py-4 rounded-xl flex items-center gap-4 hover:bg-[#00f0ff]/10 transition-colors cursor-default group">
+            <span class="material-symbols-outlined text-[#00f0ff]">groups</span>
+            <span class="font-headline font-medium">Teamwork Sync</span>
+          </div>
+          <div
+            class="bg-surface-container-low border border-[#f92a82]/20 px-6 py-4 rounded-xl flex items-center gap-4 hover:bg-[#f92a82]/10 transition-colors cursor-default group">
+            <span class="material-symbols-outlined text-[#f92a82]">psychology</span>
+            <span class="font-headline font-medium">Problem Solver</span>
+          </div>
+          <div
+            class="bg-surface-container-low border border-[#00f0ff]/20 px-6 py-4 rounded-xl flex items-center gap-4 hover:bg-[#00f0ff]/10 transition-colors cursor-default group">
+            <span class="material-symbols-outlined text-[#00f0ff]">terminal</span>
+            <span class="font-headline font-medium">Logic Driven</span>
+          </div>
+          <div
+            class="bg-surface-container-low border border-[#f92a82]/20 px-6 py-4 rounded-xl flex items-center gap-4 hover:bg-[#f92a82]/10 transition-colors cursor-default group">
+            <span class="material-symbols-outlined text-[#f92a82]">update</span>
+            <span class="font-headline font-medium">Fast Learner</span>
+          </div>
+          <div
+            class="bg-surface-container-low border border-[#00f0ff]/20 px-6 py-4 rounded-xl flex items-center gap-4 hover:bg-[#00f0ff]/10 transition-colors cursor-default group">
+            <span class="material-symbols-outlined text-[#00f0ff]">architecture</span>
+            <span class="font-headline font-medium">Detail Oriented</span>
+          </div>
+        </div>
+        <!-- Quote Section -->
+        <div
+          class="mt-12 p-8 bg-surface-container-lowest rounded-xl border-l-8 border-[#00f0ff] relative overflow-hidden">
+          <div class="absolute top-0 right-0 p-4 opacity-10">
+            <span class="material-symbols-outlined text-6xl">format_quote</span>
+          </div>
+          <p class="italic text-lg text-on-surface leading-relaxed relative z-10">
+            "La differenza tra un buon gioco e un'esperienza indimenticabile risiede nella cura ossessiva per i dettagli
+            che nessuno nota consapevolmente, ma che tutti percepiscono."
+          </p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ========================================== -->
+  <!-- SEZIONE CONTATTI E FINE PIE DI PAGINA      -->
+  <!-- ========================================== -->
+  <section class="py-24 px-8 md:px-20 max-w-[1920px] mx-auto">
+    <div
+      class="bg-surface-container-lowest rounded-2xl p-12 border border-outline-variant/20 relative overflow-hidden flex flex-col md:flex-row items-center gap-12">
+      <div class="absolute top-0 right-0 w-64 h-64 bg-primary-container/5 blur-[120px] rounded-full"></div>
+      <div class="absolute bottom-0 left-0 w-64 h-64 bg-accent-pink/5 blur-[120px] rounded-full"></div>
+      <div class="relative z-10 flex-1">
+        <h2 class="font-display text-3xl font-bold text-on-surface mb-4 uppercase">Pronto per il <span
+            class="text-accent-pink">Next Level?</span></h2>
+        <p class="font-body text-on-surface-variant max-w-md">Collaboriamo per trasformare la tua visione in una realtà
+          interattiva. Disponibile per freelance e consulenze tecniche.</p>
+      </div>
+      <div class="relative z-10 w-full md:w-auto">
+        <div class="flex flex-col sm:flex-row gap-4">
+          <input
+            class="bg-surface-container-high border-outline/20 text-on-surface px-6 py-4 font-label text-sm min-w-[300px] focus:ring-1 focus:ring-primary-container focus:border-primary-container outline-none transition-all uppercase tracking-widest"
+            placeholder="IL_TUO_EMAIL@PROVIDER.COM" type="email" />
+          <button
+            class="bg-primary-container text-on-primary px-8 py-4 font-headline font-black uppercase tracking-widest hover:bg-surface-tint transition-all active:scale-95">CONNETTITI</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- FOOTER                                     -->
+  <!-- ========================================== -->
+  <footer class="bg-[#0c0e17] w-full py-12 px-8 mt-20 border-t border-[#3b494b]/10">
+    <div class="flex flex-col gap-6 max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="text-[#00f0ff] font-bold text-xl font-display tracking-tighter">
+          ZAKER <span class="text-on-surface-variant/40 font-light font-body">| GAME_DEV</span>
+        </div>
+        <p class="text-[#b9cacb] font-['Manrope'] text-[0.6875rem] uppercase tracking-[0.2em] font-light">
+          ©2026 GASPARE CIPOLLETTA A.K.A ZAKER. <span class="lang-it">TUTTI I DIRITTI RISERVATI.</span><span
+            class="lang-en">ALL RIGHTS RESERVED.</span>
+        </p>
+      </div>
+      <div
+        class="flex justify-center gap-8 font-['Manrope'] text-[0.75rem] tracking-[0.1em] uppercase text-[#b9cacb] border-t border-[#3b494b]/10 pt-6">
+        <a class="hover:text-[#dbfcff] transition-all opacity-80 hover:opacity-100" href="#">INSTAGRAM</a>
+        <a class="hover:text-[#dbfcff] transition-all opacity-80 hover:opacity-100" href="#">ARTSTATION</a>
+        <a class="hover:text-[#dbfcff] transition-all opacity-80 hover:opacity-100" href="#">LINKEDIN</a>
+        <a class="hover:text-[#dbfcff] transition-all opacity-80 hover:opacity-100" href="#">GITHUB</a>
+      </div>
+    </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
