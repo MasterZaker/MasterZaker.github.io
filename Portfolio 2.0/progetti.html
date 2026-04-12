@@ -20,6 +20,7 @@
   <script src="lang.js"></script>
   <script src="data.js"></script>
   <script src="main.js"></script>
+  <script src="mobile-interact.js"></script>
 </head>
 
 <body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
@@ -38,36 +39,62 @@
         <a class="text-[#e1e1ef]/60 hover:text-[#e1e1ef] transition-colors font-['Space_Grotesk'] uppercase tracking-widest text-sm"
           href="index.html"><span class="lang-it">HOME</span><span class="lang-en">HOME</span></a>
         <a class="text-[#00f0ff] border-b-2 border-[#00f0ff] pb-1 font-['Space_Grotesk'] uppercase tracking-widest text-sm"
-          href="archivio.html"><span class="lang-it">PROGETTI</span><span class="lang-en">PROJECTS</span></a>
+          href="progetti.html"><span class="lang-it">PROGETTI</span><span class="lang-en">PROJECTS</span></a>
         <a class="text-[#e1e1ef]/60 hover:text-[#e1e1ef] transition-colors font-['Space_Grotesk'] uppercase tracking-widest text-sm"
           href="chi-sono.html"><span class="lang-it">CHI SONO</span><span class="lang-en">ABOUT ME</span></a>
       </nav>
-      <div class="ml-auto flex items-center gap-6">
+    <div class="ml-auto flex items-center gap-6">
         <button onclick="toggleLang()"
           class="text-on-surface-variant hover:text-primary-container font-display font-medium text-sm tracking-widest transition-colors hidden md:block">
           <span class="material-symbols-outlined text-lg align-middle mr-1">translate</span><span
             class="lang-switcher-text">EN</span>
         </button>
-        <button onclick="document.getElementById('mobile-menu').classList.toggle('open')"
-          class="md:hidden text-on-surface-variant">
-          <span class="material-symbols-outlined">menu</span>
+        <button id="hamburger-btn" class="md:hidden text-on-surface-variant p-2"
+          onclick="toggleMobileMenu()">
+          <span class="material-symbols-outlined text-3xl">menu</span>
         </button>
       </div>
     </div>
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="flex-col gap-4 px-8 pb-6 bg-[#11131c]/95 border-t border-[#3b494b]/20">
-      <a href="index.html" class="text-[#e1e1ef]/70 font-['Space_Grotesk'] uppercase tracking-widest text-sm py-2"><span
-          class="lang-it">HOME</span><span class="lang-en">HOME</span></a>
-      <a href="archivio.html" class="text-[#00f0ff] font-['Space_Grotesk'] uppercase tracking-widest text-sm py-2"><span
-          class="lang-it">PROGETTI</span><span class="lang-en">PROJECTS</span></a>
-      <a href="chi-sono.html"
-        class="text-[#e1e1ef]/70 font-['Space_Grotesk'] uppercase tracking-widest text-sm py-2"><span
-          class="lang-it">CHI SONO</span><span class="lang-en">ABOUT ME</span></a>
-      <button onclick="toggleLang()"
-        class="text-left text-on-surface-variant hover:text-primary-container font-['Space_Grotesk'] uppercase tracking-widest text-sm py-2 mt-2 border-t border-[#3b494b]/20">
-        <span class="material-symbols-outlined text-sm align-middle mr-1">translate</span>
-        <span class="lang-it">CAMBIA IN INGLESE</span><span class="lang-en">SWITCH TO ITALIAN</span>
-      </button>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" onclick="toggleMobileMenu()"></div>
+
+    <!-- Mobile Menu (Side-Drawer) -->
+    <div id="mobile-menu">
+      <div class="flex justify-between items-center mb-12">
+        <span class="text-xl font-bold text-[#00f0ff] font-display">MENU</span>
+        <button onclick="toggleMobileMenu()" class="text-on-surface-variant">
+          <span class="material-symbols-outlined text-3xl">close</span>
+        </button>
+      </div>
+      
+      <nav class="flex flex-col gap-8">
+        <a href="index.html" class="group flex items-center gap-4 text-[#e1e1ef]/70 hover:text-[#00f0ff] transition-all font-['Space_Grotesk'] uppercase tracking-widest text-lg py-2 border-b border-outline-variant/20">
+          <span class="material-symbols-outlined text-xl">home</span>
+          <span class="lang-it">HOME</span><span class="lang-en">HOME</span>
+        </a>
+        <a href="progetti.html"
+          class="group flex items-center gap-4 text-[#00f0ff] font-['Space_Grotesk'] uppercase tracking-widest text-lg py-2 border-b border-[#00f0ff]/20">
+          <span class="material-symbols-outlined text-xl">grid_view</span>
+          <span class="lang-it">PROGETTI</span><span class="lang-en">PROJECTS</span>
+        </a>
+        <a href="chi-sono.html"
+          class="group flex items-center gap-4 text-[#e1e1ef]/70 hover:text-[#00f0ff] transition-all font-['Space_Grotesk'] uppercase tracking-widest text-lg py-2 border-b border-outline-variant/20">
+          <span class="material-symbols-outlined text-xl">person</span>
+          <span class="lang-it">CHI SONO</span><span class="lang-en">ABOUT ME</span>
+        </a>
+      </nav>
+
+      <div class="mt-auto pt-8 border-t border-outline-variant/20">
+        <button onclick="toggleLang()"
+          class="w-full flex items-center gap-4 text-left text-on-surface-variant hover:text-primary-container font-['Space_Grotesk'] uppercase tracking-widest text-sm py-4">
+          <span class="material-symbols-outlined text-2xl">translate</span>
+          <div>
+            <span class="lang-it">CAMBIA IN INGLESE</span><span class="lang-en">SWITCH TO ITALIAN</span>
+            <p class="text-[0.6rem] opacity-50"><span class="lang-it">Lingua attuale: IT</span><span class="lang-en">Current Language: EN</span></p>
+          </div>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -82,7 +109,7 @@
             class="lang-it">Libreria Manufatti</span><span class="lang-en">Artifact Library</span></span>
         <div class="h-[1px] flex-grow bg-outline-variant/20"></div>
       </div>
-      <h1 class="font-display text-5xl md:text-7xl font-bold tracking-tighter uppercase leading-none neon-glow-text">
+      <h1 class="font-display text-[clamp(2.5rem,8vw,5rem)] font-bold tracking-tighter uppercase leading-none neon-glow-text">
         <span class="lang-it">ARCHIVIO <br /><span
             class="text-transparent bg-clip-text bg-gradient-to-r from-primary-container to-secondary">PROGETTI</span></span>
         <span class="lang-en">PROJECT <br /><span
@@ -93,7 +120,12 @@
     <!-- ========================================== -->
     <!-- BARRA DEI FILTRI (CATEGORIE)               -->
     <!-- ========================================== -->
-    <section class="mb-12 sticky top-24 z-40 py-4 bg-surface/80 backdrop-blur-md">
+    <section class="mb-12 md:sticky md:top-24 z-40 py-4 bg-surface/80 backdrop-blur-md">
+      <!-- Bottone Filtri Mobile (Nascosto su Desktop) -->
+      <button id="mobile-filter-trigger" class="md:hidden" onclick="toggleMobileFilters()">
+        <span class="material-symbols-outlined">filter_list</span>
+      </button>
+
       <div class="flex flex-wrap items-center gap-2" id="filter-container">
         <button data-filter="TUTTI"
           class="filter-btn px-6 py-2 bg-primary-container text-on-primary font-label text-[0.6875rem] font-bold tracking-widest transition-all duration-300 border border-primary-container"><span

@@ -50,9 +50,62 @@ function initCursor() {
 
 // Inizializza quando il DOM è pronto
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initCursor);
+    document.addEventListener('DOMContentLoaded', () => {
+        const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+        if (!isTouch) {
+            initCursor();
+        }
+        initMobileMenu();
+    });
 } else {
-    initCursor();
+    const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    if (!isTouch) {
+        initCursor();
+    }
+    initMobileMenu();
+}
+
+// ==========================================
+// 1.1 LOGICA MENU MOBILE
+// ==========================================
+
+function initMobileMenu() {
+    // Chiudi il menu se si ridimensiona a desktop
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768) {
+            const menu = document.getElementById('mobile-menu');
+            const overlay = document.getElementById('mobile-menu-overlay');
+            if (menu && menu.classList.contains('open')) {
+                toggleMobileMenu();
+            }
+        }
+    });
+
+    // Chiudi il menu al click su un link
+    const mobileLinks = document.querySelectorAll('#mobile-menu a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            toggleMobileMenu();
+        });
+    });
+}
+
+window.toggleMobileMenu = function() {
+    const menu = document.getElementById('mobile-menu');
+    const overlay = document.getElementById('mobile-menu-overlay');
+    const body = document.body;
+
+    if (!menu || !overlay) return;
+
+    menu.classList.toggle('open');
+    overlay.classList.toggle('active');
+    
+    // Blocca lo scroll del body quando il menu è aperto
+    if (menu.classList.contains('open')) {
+        body.style.overflow = 'hidden';
+    } else {
+        body.style.overflow = '';
+    }
 }
 
 // ==========================================
@@ -78,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ? `<video class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" src="${p.img}" autoplay muted loop playsinline></video>` 
             : `<img alt="${p.title}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" src="${p.img}"/>`;
 
-          return `<div class="group relative ${span} ${aspect} overflow-hidden rounded-xl bg-surface-container-lowest cursor-pointer" onclick="location.href='archivio.html'">
+          return `<div class="group relative ${span} ${aspect} overflow-hidden rounded-xl bg-surface-container-lowest cursor-pointer" onclick="location.href='progetti.html'">
             ${mediaHTML}
             <div class="absolute inset-0 bg-gradient-to-t from-[#0c0e17] via-transparent to-transparent opacity-90"></div>
             <div class="absolute bottom-0 left-0 p-6 w-full transform transition-transform duration-500 group-hover:-translate-y-2">
