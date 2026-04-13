@@ -83,15 +83,15 @@ document.addEventListener("DOMContentLoaded", () => {
           return `<div class="group relative ${span} ${aspect} overflow-hidden rounded-xl bg-surface-container-lowest cursor-pointer" onclick="location.href='progetti.html'">
             ${mediaHTML}
             <div class="absolute inset-0 bg-gradient-to-t from-[#0c0e17] via-transparent to-transparent opacity-90"></div>
-            <div class="absolute bottom-0 left-0 p-6 w-full transform transition-transform duration-500 group-hover:-translate-y-2">
-              <div class="flex flex-wrap gap-2 mb-3">
-                <span class="px-3 py-1 bg-primary-container/20 text-primary-container text-[10px] font-label font-bold uppercase tracking-wider rounded-full border border-primary-container/30">
+            <div class="absolute bottom-0 left-0 right-0 p-4 md:p-6 w-full transform transition-transform duration-500 group-hover:-translate-y-2 flex flex-col items-start text-left">
+              <div class="flex flex-wrap gap-2 mb-3 justify-start">
+                <span class="px-2 py-0.5 md:px-3 md:py-1 bg-primary-container/20 text-primary-container text-[9px] md:text-[10px] font-label font-bold uppercase tracking-wider rounded-full border border-primary-container/30">
                   <span class="lang-it">${p.tag}</span><span class="lang-en">${p.tagEn}</span>
                 </span>
-                ${(p.software || []).map(sw => `<span class="px-3 py-1 bg-surface-container-highest/60 text-on-surface-variant text-[10px] font-label font-bold rounded-full">${sw}</span>`).join('')}
+                ${(p.software || []).map(sw => `<span class="px-2 py-0.5 md:px-3 md:py-1 bg-surface-container-highest/60 text-on-surface-variant text-[9px] md:text-[10px] font-label font-bold rounded-full">${sw}</span>`).join('')}
               </div>
-              <h3 class="font-display text-${p.wide?'3xl':'xl'} font-bold text-[#e1e1ef] mb-1">${p.title}</h3>
-              <p class="text-[#b9cacb] font-body text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <h3 class="font-display text-${p.wide?'2xl':'lg'} md:text-${p.wide?'3xl':'xl'} font-bold text-[#e1e1ef] mb-1">${p.title}</h3>
+              <p class="text-[#b9cacb] font-body text-xs md:text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <span class="lang-it">${p.desc}</span><span class="lang-en">${p.descEn}</span>
               </p>
             </div>
@@ -134,8 +134,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 </span>
               </div>
             </div>
-            <div class="p-6">
-              <div class="flex justify-between items-start mb-2">
+            <div class="p-4">
+              <div class="flex justify-between items-baseline mb-2">
                 <h3 class="font-display text-xl font-bold tracking-tight text-on-surface group-hover:text-primary-container transition-colors">${p.title}</h3>
                 <span class="font-label text-[10px] text-outline-variant uppercase">${p.year || ''}</span>
               </div>
