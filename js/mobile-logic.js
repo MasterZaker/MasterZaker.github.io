@@ -4,14 +4,15 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Esci se non siamo in modalità mobile
-    if (!document.documentElement.classList.contains('is-mobile')) return;
-
-    console.log("ZAKER_MOBILE: Logica attivata.");
-    
+    // Inizializza i componenti interattivi mobile su tutte le piattaforme per garantire la responsività su browser ridimensionati
     initMobileMenu();
-    initMobileRipple();
     initMobileFilters();
+
+    // L'effetto onda (ripple) viene attivato solo su dispositivi touch effettivi
+    if (document.documentElement.classList.contains('is-mobile')) {
+        console.log("ZAKER_MOBILE: Rilevato touch screen, caricamento Ripple Effect.");
+        initMobileRipple();
+    }
 });
 
 /**

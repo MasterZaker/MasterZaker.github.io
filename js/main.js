@@ -115,6 +115,25 @@ document.addEventListener("DOMContentLoaded", () => {
         archiveGrid.innerHTML = '';
         const filtered = ALL_PROJECTS.filter(p => filter === 'TUTTI' || p.tag === filter);
 
+        if (filtered.length === 0) {
+          archiveGrid.innerHTML = `
+            <div class="col-span-full py-20 flex flex-col items-center justify-center text-center opacity-80">
+              <span class="material-symbols-outlined text-6xl text-[#00f0ff] mb-4 drop-shadow-[0_0_15px_rgba(0,240,255,0.6)] animate-pulse">construction</span>
+              <h3 class="font-display text-2xl font-bold uppercase text-[#e1e1ef] mb-2 tracking-widest">
+                <span class="lang-it">Lavoro in corso</span>
+                <span class="lang-en">Work in Progress</span>
+              </h3>
+              <p class="text-[#b9cacb] font-body text-sm max-w-md mx-auto">
+                <span class="lang-it">Nuovi entusiasmanti progetti sono in arrivo per questa sezione. Resta sintonizzato!</span>
+                <span class="lang-en">Exciting new projects are coming to this section soon. Stay tuned!</span>
+              </p>
+            </div>
+          `;
+          const savedLang = localStorage.getItem('zk_lang') || 'it';
+          document.documentElement.lang = savedLang;
+          return;
+        }
+
         filtered.forEach(p => {
           let mediaHTML = p.isVideo
             ? `<video class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" src="${p.img}" autoplay muted loop playsinline></video>`

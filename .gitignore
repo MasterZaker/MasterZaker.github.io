@@ -1,0 +1,13 @@
+# JetBrains IDEs (IntelliJ, WebStorm, PhpStorm, etc.)
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs and temp files
+*.log
+*.tmp
+*.bak

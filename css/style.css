@@ -51,9 +51,12 @@ html, body {
    UI e Menu
 ------------------------------------------ */
 #mobile-menu, #mobile-filter-trigger, #mobile-menu-overlay { display: none !important; }
-.is-mobile #mobile-menu { display: flex !important; }
-.is-mobile #mobile-menu-overlay { display: block !important; }
-.is-mobile #mobile-filter-trigger { display: flex !important; }
+
+@media (max-width: 767px) {
+    #mobile-menu { display: flex !important; }
+    #mobile-menu-overlay { display: block !important; }
+    #mobile-filter-trigger { display: flex !important; }
+}
 
 .card-glow:hover {
     box-shadow: 0 0 30px rgba(0, 240, 255, 0.1);
